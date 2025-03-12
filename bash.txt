@@ -1,0 +1,7 @@
+npm install -g firebase-tools
+
+firebase login
+
+firebase projects:list
+
+npx https://gist.github.com/mbleigh/9c8680cf319ace2f506f57380da66e7d portfilo-nila

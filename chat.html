@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            width: 400px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 70%;
+        }
+        .message.user {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+        }
+        .message.bot {
+            background-color: #f1f0f0;
+            align-self: flex-start;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .input-group input, .input-group select, .input-group button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .input-group button {
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .messages {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat" class="messages"></div>
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Enter your name">
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="text" id="question" placeholder="Ask a question">
+            <button onclick="sendQuestion()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        async function sendQuestion() {
+            const name = document.getElementById('name').value;
+            const gender = document.getElementById('gender').value;
+            const question = document.getElementById('question').value;
+            const context = `display name if user ask "did you remember me" ${name}. I am a ${gender}. Answer like a college boy.`;
+            const response = await fetch('http://127.0.0.1:5000/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ context, question })
+            });
+            const data = await response.json();
+            addMessage('user', question);
+            addMessage('bot', data.response);
+            document.getElementById('question').value = '';
+        }
+
+        function addMessage(sender, text) {
+            const chat = document.getElementById('chat');
+            const message = document.createElement('div');
+            message.className = 'message ' + sender;
+            message.innerText = text;
+            chat.appendChild(message);
+        }
+    </script>
+</body>
+</html>

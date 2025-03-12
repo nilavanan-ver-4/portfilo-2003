@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Flask API on Lambda
+
+Resources:
+  FlaskFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: wsgi.handler
+      Runtime: python3.9
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 30
+      Environment:
+        Variables:
+          GOOGLE_API_KEY: "AIzaSyAudxV-kZZrGwXGPArYYa6lvls8zc0S0mc"
+          GOOGLE_APPLICATION_CREDENTIALS: "portfilo-2003-firebase-adminsdk-de7he-3d150506b8.json"
+      Events:
+        ProxyApi:
+          Type: 'Api'
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
+Outputs:
+  FlaskApi:
+    Description: "API Gateway endpoint URL for Prod environment"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
