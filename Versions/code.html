@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NILAVANAN S A | Director &amp; Shareholder</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df2f2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#000000", // Pure black for cinematic effect
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(13, 242, 242, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 242, 242, 0.15);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(13, 242, 242, 0.3);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(13, 242, 242, 0.5);
+        }
+
+        .rim-light {
+            box-shadow: inset 0 0 50px rgba(13, 242, 242, 0.1), 0 0 30px rgba(13, 242, 242, 0.05);
+        }
+
+        .gradient-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+
+        .marquee-container:hover .animate-scroll {
+            animation-play-state: paused;
+        }
+
+ .partner-logo-wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 184px;
+            height: 96px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02) 65%);
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            cursor: default;
+        }
+
+        .partner-logo-wrap:hover {
+            transform: translateY(-4px);
+            border-color: rgba(13, 242, 242, 0.5);
+            box-shadow: 0 0 18px rgba(13, 242, 242, 0.25);
+        }
+
+        .partner-logo-image {
+            width: calc(100% - 1.4rem);
+            height: calc(100% - 1.4rem);
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            background: #fff;
+            padding: 0.35rem;
+            filter: grayscale(6%) brightness(0.98);
+            transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .partner-logo-wrap:hover .partner-logo-image {
+            transform: scale(1.06);
+            filter: grayscale(0%) brightness(1.03);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+        }
+
+        .partner-logo-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0.6rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .partner-logo-wrap:hover .partner-logo-overlay {
+            opacity: 1;
+        }
+
+        .partner-logo-overlay span {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .partner-logo-wrap {
+                width: 152px;
+                height: 84px;
+            }
+        }
+        .skills-card {
+            position: relative;
+            background: linear-gradient(170deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            overflow: hidden;
+            transition: transform 350ms ease, border-color 350ms ease, box-shadow 350ms ease;
+        }
+
+        .skills-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, transparent 25%, rgba(13, 242, 242, 0.18) 50%, transparent 75%);
+            transform: translateX(-120%);
+            transition: transform 650ms ease;
+            pointer-events: none;
+        }
+
+        .skills-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(13, 242, 242, 0.5);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 0 0 24px rgba(13, 242, 242, 0.2);
+        }
+
+        .skills-card:hover::before {
+            transform: translateX(120%);
+        }
+
+        .skills-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            border-radius: 0.75rem;
+            padding: 0.45rem 0.5rem;
+            transition: background-color 250ms ease, transform 250ms ease;
+        }
+
+        .skills-list-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(5px);
+        }
+
+        .skill-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #0df2f2;
+            background: rgba(13, 242, 242, 0.12);
+            border: 1px solid rgba(13, 242, 242, 0.25);
+            box-shadow: 0 0 0 rgba(13, 242, 242, 0);
+            transition: transform 250ms ease, box-shadow 300ms ease, background-color 300ms ease;
+        }
+
+        .skills-list-item:hover .skill-icon {
+            transform: scale(1.08);
+            background: rgba(13, 242, 242, 0.2);
+            box-shadow: 0 0 16px rgba(13, 242, 242, 0.35);
+        }
+
+        .skills-list-item .material-symbols-outlined {
+            font-size: 1rem;
+        }
+
+        .skills-wall {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.25rem;
+            padding: 1.75rem 1.25rem;
+        }
+
+        .skills-group-title {
+            color: #facc15;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.85rem;
+            line-height: 1;
+            margin: 0.75rem 0 1.25rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.8rem 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills-grid:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 0.6rem;
+            color: #ffffff;
+            transition: transform 260ms ease, filter 260ms ease;
+            position: relative;
+        }
+
+        .skill-node i {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.92);
+            transition: color 260ms ease, text-shadow 260ms ease, transform 260ms ease;
+        }
+
+        .skill-node span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffffff;
+            letter-spacing: 0.01em;
+        }
+
+        .skill-node:hover {
+            transform: translateY(-6px) scale(1.03);
+            filter: brightness(1.05);
+        }
+
+        .skill-node:hover i {
+            color: #0df2f2;
+            text-shadow: 0 0 16px rgba(13, 242, 242, 0.5);
+            transform: scale(1.08);
+        }
+
+        .skill-node[data-tip]::after {
+            content: attr(data-tip);
+            position: absolute;
+            top: -1.35rem;
+            left: 50%;
+            transform: translate(-50%, -4px);
+            background: #000000;
+            color: #ffffff;
+            font-size: 0.72rem;
+            padding: 0.32rem 0.55rem;
+            border-radius: 0.45rem;
+            opacity: 0;
+            pointer-events: none;
+            white-space: nowrap;
+            transition: opacity 180ms ease, transform 180ms ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .skill-node[data-tip]:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -12px);
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 220ms ease;
+            padding: 1rem;
+        }
+
+        .image-lightbox.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-lightbox-content {
+            max-width: min(88vw, 760px);
+            max-height: 88vh;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 1rem;
+            border: 1px solid rgba(13, 242, 242, 0.35);
+            box-shadow: 0 0 45px rgba(13, 242, 242, 0.18);
+            background: #000;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .resume-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-bg-icon {
+            position: absolute;
+            right: -0.35rem;
+            bottom: -0.45rem;
+            font-size: 4.7rem;
+            color: rgba(13, 242, 242, 0.12);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .resume-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .skills-wall {
+                padding: 2.2rem 1.8rem;
+            }
+
+            .skills-grid.tools-grid {
+                grid-template-columns: repeat(7, minmax(0, 1fr));
+            }
+
+            .skills-grid.prog-grid,
+            .skills-grid.framework-grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+
+            .skills-grid.db-grid {
+                grid-template-columns: repeat(6, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 767px) {
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            #profile {
+                overflow-x: clip;
+            }
+
+            .mobile-floating-cards {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+            }
+
+            .mobile-floating-cards.hidden {
+                display: none !important;
+            }
+
+            .mobile-floating-cards > div {
+                max-width: 58vw;
+                padding: 0.5rem 0.65rem;
+                gap: 0.45rem;
+            }
+
+            .mobile-floating-cards > div p:first-child {
+                font-size: 0.5rem;
+                letter-spacing: 0.08em;
+            }
+
+            .mobile-floating-cards > div p:last-child {
+                font-size: 0.68rem;
+                line-height: 1.1;
+            }
+
+            .mobile-floating-cards .material-symbols-outlined {
+                font-size: 0.95rem;
+            }
+
+            .mobile-floating-cards > div:nth-child(1) {
+                top: -0.4rem !important;
+                left: 0.25rem !important;
+            }
+
+            .mobile-floating-cards > div:nth-child(2) {
+                top: 26% !important;
+                right: 0.1rem !important;
+            }
+
+            .mobile-floating-cards > div:nth-child(3) {
+                bottom: 21% !important;
+                left: 0.1rem !important;
+            }
+
+            .mobile-floating-cards > div:nth-child(4) {
+                bottom: 0.4rem !important;
+                right: 0.25rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-white font-display overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header
+        class="hidden md:flex fixed top-0 left-0 w-full z-50 px-6 py-4 items-center justify-between border-b border-white/5 bg-black/40 backdrop-blur-md">
+        <div class="flex items-center gap-3">
+            <div class="size-8 bg-primary/20 rounded-full flex items-center justify-center border border-primary/40">
+                <span class="material-symbols-outlined text-primary text-xl">insights</span>
+            </div>
+            <span class="text-white text-lg font-black tracking-tighter uppercase">NILAVANAN S A</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+            <a class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#profile">Profile</a>
+            <a class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#ecosystem">Ecosystem</a>
+            <a class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#trade">Global Trade</a>
+            <a class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#contact">Contact</a>
+        </nav>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+            class="hidden md:block px-5 py-2 bg-primary/10 border border-primary text-primary text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary hover:text-black transition-all duration-300">
+            Connect
+        </button>
+    </header>
+    <main id="profile" class="relative min-h-screen flex flex-col items-center justify-center pt-20">
+        <!-- Connectivity Arcs (Decorative Background) -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            <svg class="absolute top-1/4 left-1/4 w-[800px] h-[400px]" viewbox="0 0 800 400">
+                <path class="text-primary" d="M0,200 Q400,0 800,200" fill="none" stroke="currentColor"
+                    stroke-dasharray="5 5" stroke-width="0.5"></path>
+            </svg>
+            <svg class="absolute bottom-1/4 right-1/4 w-[600px] h-[300px]" viewbox="0 0 600 300">
+                <path class="text-primary" d="M0,150 Q300,300 600,150" fill="none" stroke="currentColor"
+                    stroke-dasharray="10 5" stroke-width="0.5"></path>
+            </svg>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full bg-primary/5 blur-[120px]">
+            </div>
+        </div>
+        <!-- Hero Section -->
+        <div class="relative z-10 container mx-auto px-4 flex flex-col items-center">
+            <!-- High-End Sector Toggle -->
+            <div class="mb-12 md:mb-16 relative group z-50">
+                <div
+                    class="relative glass-card p-1.5 rounded-full flex bg-gradient-to-b from-white/10 to-black/80 shadow-[0_0_30px_rgba(13,242,242,0.1)] border border-white/10 backdrop-blur-xl overflow-hidden">
+                    <div id="toggle-glider"
+                        class="absolute top-1.5 left-1.5 bottom-1.5 w-[132px] sm:w-[140px] md:w-[160px] bg-gradient-to-r from-primary to-[#0ad1d1] rounded-full transition-transform duration-500 ease-in-out z-0 shadow-[0_0_20px_rgba(13,242,242,0.4)]">
+                    </div>
+                    <button id="btn-business" onclick="switchToggle('business')"
+                        class="relative z-10 w-[132px] sm:w-[140px] md:w-[160px] py-3 flex items-center justify-center gap-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-black transition-colors duration-500">
+                        <span class="material-symbols-outlined text-sm md:text-base drop-shadow-md">domain</span>
+                        Business
+                    </button>
+                    <button id="btn-education" onclick="switchToggle('education')"
+                        class="relative z-10 w-[132px] sm:w-[140px] md:w-[160px] py-3 flex items-center justify-center gap-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors duration-500">
+                        <span class="material-symbols-outlined text-sm md:text-base">school</span>
+                        Education
+                    </button>
+                </div>
+            </div>
+
+            <!-- Portrait Container -->
+            <div class="relative mb-12 group">
+                <!-- Portrait Image -->
+                <div
+                    class="relative size-64 md:size-80 lg:size-[450px] rounded-full overflow-hidden rim-light border-2 border-primary/20 p-2">
+                    <img id="profile-image" alt="Portrait of Nilavanan S A"
+                        class="w-full h-full object-cover rounded-full gradient-mask grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 cursor-zoom-in"
+                        src="business.png" />
+                </div>
+                <!-- Floating Glassmorphism Cards -->
+                <div id="business-cards" class="mobile-floating-cards">
+                    <!-- Card 1: Top Left -->
+                    <div
+                        class="absolute -top-4 -left-12 lg:-left-24 glass-card px-4 py-3 rounded-xl flex items-center gap-3 glow-cyan animate-pulse">
+                        <span class="material-symbols-outlined text-primary">public</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Operation</p>
+                            <p class="text-xs font-medium text-white">Global Trade Operations</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Mid Right -->
+                    <div
+                        class="absolute top-1/4 -right-16 lg:-right-32 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">inventory_2</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Network</p>
+                            <p class="text-xs font-medium text-white">Product Sourcing</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Bottom Left -->
+                    <div
+                        class="absolute bottom-10 -left-16 lg:-left-40 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">analytics</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Intelligence</p>
+                            <p class="text-xs font-medium text-white">Supply Chain Intelligence</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Bottom Right -->
+                    <div
+                        class="absolute -bottom-6 -right-12 lg:-right-20 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">monitoring</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Analytics</p>
+                            <p class="text-xs font-medium text-white">E-Commerce Strategy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="education-cards" class="hidden mobile-floating-cards">
+                    <!-- Card 1: Top Left -->
+                    <div
+                        class="absolute -top-4 -left-12 lg:-left-24 glass-card px-4 py-3 rounded-xl flex items-center gap-3 glow-cyan animate-pulse">
+                        <span class="material-symbols-outlined text-primary">school</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Academics</p>
+                            <p class="text-xs font-medium text-white">MBA Curriculum</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Mid Right -->
+                    <div
+                        class="absolute top-1/4 -right-16 lg:-right-32 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">smart_toy</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Robotics</p>
+                            <p class="text-xs font-medium text-white">Automation</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Bottom Left -->
+                    <div
+                        class="absolute bottom-10 -left-16 lg:-left-40 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">cloud</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Cloud</p>
+                            <p class="text-xs font-medium text-white">CI/CD &amp; DevOps</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Bottom Right -->
+                    <div
+                        class="absolute -bottom-6 -right-12 lg:-right-20 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">psychology</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Gen AI</p>
+                            <p class="text-xs font-medium text-white">Prompt Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Text Content -->
+            <div class="w-full max-w-6xl px-4">
+                <div id="business-content" class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white">
+                        NILAVANAN S A
+                    </h1>
+                    <p class="text-primary text-sm md:text-lg font-bold tracking-[0.3em] uppercase mb-6 glow-text">
+                        Director &amp; Shareholder at Teleportz | nfashz
+                    </p>
+                    <!-- Expertise Bar -->
+                    <div
+                        class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 border-y border-white/10 py-4 px-6">
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Global
+                                Trade</span>
+                        </div>
+                        <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Supply
+                                Chain</span>
+                        </div>
+                        <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span
+                                class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">E-Commerce
+                                Strategy</span>
+                        </div>
+                    </div>
+                    <!-- Primary CTA -->
+                    <div class="flex flex-col items-center gap-6">
+                        <button
+                            class="group relative px-10 py-4 bg-primary text-black font-black uppercase tracking-[0.2em] rounded-lg transition-all duration-300 hover:scale-105 glow-cyan">
+                            <span class="relative z-10">Explore Our Ecosystem</span>
+                            <div
+                                class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                            </div>
+                        </button>
+                        <p class="text-white/40 text-[10px] uppercase tracking-widest max-w-md">
+                            Pioneering the future of global logistics and digital trade integration through strategic
+                            excellence.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="education-content" class="hidden mt-8 w-full space-y-10">
+                    <div class="text-center max-w-4xl mx-auto mb-10">
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white">
+                            NILAVANAN S A
+                        </h1>
+                        <p class="text-primary text-sm md:text-lg font-bold tracking-[0.3em] uppercase mb-6 glow-text">
+                            MBA student at Annamalai University
+                        </p>
+                        <!-- Expertise Bar -->
+                        <div
+                            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 border-y border-white/10 py-4 px-6">
+                            <div class="flex items-center gap-2">
+                                <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                                <span
+                                    class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Robotics
+                                    &amp; Cloud</span>
+                            </div>
+                            <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                                <span
+                                    class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">DevOps
+                                    &amp; CI/CD</span>
+                            </div>
+                            <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                                <span
+                                    class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">GenAI
+                                    &amp; VibeCoding</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-black text-white mb-2">Resumes</h3>
+                        <p class="text-white/60 text-sm mb-6">Download or view the resume that fits your needs.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">precision_manufacturing</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">Robotics &amp; Cloud Resume</p>
+                                    <p class="text-white/60 text-sm mb-4">Focused on robotics, automation, and cloud
+                                        integration projects.</p>
+                                    <div class="flex gap-3">
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">cloud_sync</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">DevOps &amp; Cloud Resume</p>
+                                    <p class="text-white/60 text-sm mb-4">Emphasizing CI/CD pipelines, cloud
+                                        infrastructure,
+                                        and automation tools.</p>
+                                    <div class="flex gap-3">
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">auto_awesome</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">GenAI &amp; VibeCoding Resume</p>
+                                    <p class="text-white/60 text-sm mb-4">Highlights AI-driven development, generative
+                                        models, and creative coding.</p>
+                                    <div class="flex gap-3">
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">business_center</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">Management / MBA Resume</p>
+                                    <p class="text-white/60 text-sm mb-4">Emphasis on business analysis, management,
+                                        and
+                                        leadership skills.</p>
+                                    <div class="flex gap-3">
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="#"
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-black text-white mb-4">My Skills</h3>
+                        <div class="skills-wall">
+                            <p class="skills-group-title">Tools</p>
+                            <div class="skills-grid tools-grid">
+                                <div class="skill-node"><i class="devicon-git-plain"></i><span>Git</span></div>
+                                <div class="skill-node"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                                <div class="skill-node"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+                                <div class="skill-node"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                                <div class="skill-node"><i
+                                        class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+                                <div class="skill-node"><i class="devicon-googlecloud-plain"></i><span>Google Cloud</span>
+                                </div>
+                                <div class="skill-node"><i class="devicon-grafana-plain"></i><span>Grafana</span></div>
+                            </div>
+
+                            <p class="skills-group-title">Programming</p>
+                            <div class="skills-grid prog-grid">
+                                <div class="skill-node"><i class="devicon-python-plain"></i><span>Python</span></div>
+                                <div class="skill-node"><i class="devicon-java-plain"></i><span>Java</span></div>
+                                <div class="skill-node" data-tip="Powers dynamic web applications"><i
+                                        class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                                <div class="skill-node"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+                                <div class="skill-node"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+                            </div>
+
+                            <p class="skills-group-title">Frameworks</p>
+                            <div class="skills-grid framework-grid">
+                                <div class="skill-node"><i class="devicon-react-original"></i><span>React.js</span></div>
+                                <div class="skill-node"><i class="devicon-vitejs-plain"></i><span>Vite.js</span></div>
+                                <div class="skill-node"><i class="devicon-express-original"></i><span>Express</span></div>
+                                <div class="skill-node"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                                <div class="skill-node"><i
+                                        class="devicon-reactrouter-plain"></i><span>React Router</span></div>
+                            </div>
+
+                            <p class="skills-group-title">Databases</p>
+                            <div class="skills-grid db-grid">
+                                <div class="skill-node"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+                                <div class="skill-node"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span>
+                                </div>
+                                <div class="skill-node"><i class="devicon-mysql-plain-wordmark"></i><span>MySQL</span>
+                                </div>
+                                <div class="skill-node"><i
+                                        class="devicon-microsoftsqlserver-plain"></i><span>MS SQL Server</span></div>
+                                <div class="skill-node"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+                                <div class="skill-node"><i class="devicon-apachespark-original"></i><span>Apache
+                                        Spark</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-black text-white mb-4">Experience</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white/5 border border-primary/20 rounded-2xl p-5">
+                                <p class="text-white text-base md:text-lg font-bold leading-snug">Backend Developer &amp;
+                                    Business Analyst (Contract)</p>
+                                <p class="text-primary text-sm font-semibold mt-1">Tunelink Networks AI, Bengaluru</p>
+                                <p class="text-white/60 text-xs mt-1 tracking-wide">Jul 2024 - Jul 2025 | Hybrid</p>
+                                <p class="text-sm mt-3"><span class="text-primary font-semibold">Tools:</span> <span
+                                        class="text-white/80">Python, Flask, Django, PostgreSQL, Grafana, Twilio</span>
+                                </p>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Built
+                                            backend systems using Python and Node.js, and set up real-time monitoring
+                                            with Grafana.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Deployed
+                                            an AI-powered voice interaction system with Twilio for live call
+                                            automation.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Enhanced
+                                            responsive web applications using Flask and Django.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Managed
+                                            MySQL and PostgreSQL databases with focus on performance optimization.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/5 border border-primary/20 rounded-2xl p-5">
+                                <p class="text-white text-base md:text-lg font-bold leading-snug">IoT and Robotics
+                                    (Intern)</p>
+                                <p class="text-primary text-sm font-semibold mt-1">Nissi Engineering Solutions, Chennai
+                                </p>
+                                <p class="text-white/60 text-xs mt-1 tracking-wide">Jun 2024 - Jul 2024 | On-site</p>
+                                <p class="text-sm mt-3"><span class="text-primary font-semibold">Tools:</span> <span
+                                        class="text-white/80">Arduino, C++, Sensors, Embedded Systems</span></p>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Implemented
+                                            basic robotic systems using Arduino microcontrollers.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Gained
+                                            hands-on experience with various sensor interfacing techniques.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Learned
+                                            fundamentals of embedded programming and hardware integration.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-primary/10 border border-primary/25 rounded-2xl p-5">
+                            <p class="text-primary uppercase tracking-widest text-xs font-bold mb-2">Certifications</p>
+                            <p class="text-white/80 text-sm">Cloud, DevOps, AI, and software development certifications.
+                            </p>
+                        </div>
+                        <div class="bg-primary/10 border border-primary/25 rounded-2xl p-5">
+                            <p class="text-primary uppercase tracking-widest text-xs font-bold mb-2">Projects</p>
+                            <p class="text-white/80 text-sm">Robotics, automation, cloud-native, and GenAI project
+                                portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="ecosystem" class="business-only py-24 relative z-10 overflow-hidden border-t border-white/5">
+        <div class="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-primary/5 blur-[120px] pointer-events-none"></div>
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-6 mb-16">
+                <div class="h-px w-12 bg-primary"></div>
+                <h2 class="text-xs font-bold uppercase tracking-[0.6em] text-primary">Founder's Vision</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Vision Statement -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-2 border-primary/40 flex flex-col justify-between group hover:border-primary transition-all duration-500">
+                    <div class="space-y-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+                        <h3 class="text-xl font-black uppercase tracking-tight">Vision Statement</h3>
+                        <p class="text-lg font-medium text-white leading-tight">Pioneering global trade through
+                            strategic digital ecosystems.</p>
+                    </div>
+                </div>
+                <!-- Story -->
+                <div
+                    class="glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-primary transition-all duration-500">
+                    <div class="space-y-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">history_edu</span>
+                        <h3 class="text-xl font-black uppercase tracking-tight">The Story</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Teleportz and nfashz were born from a mission to bridge the gap between complex global
+                            logistics and seamless digital commerce. We built these platforms to empower brands with
+                            intelligent supply chain infrastructure.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mindset -->
+                <div
+                    class="glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-primary transition-all duration-500">
+                    <div class="space-y-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">psychology</span>
+                        <h3 class="text-xl font-black uppercase tracking-tight">Mindset</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Strategy is the blueprint, but execution is the heartbeat. My approach combines data-driven
+                            intelligence with relentless operational excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-only py-24 relative z-10 bg-black/30 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-center gap-6 mb-16">
+                <div class="h-px w-12 bg-primary/40"></div>
+                <h2 class="text-xs font-bold uppercase tracking-[0.6em] text-primary">Strategic Workflow</h2>
+                <div class="h-px w-12 bg-primary/40"></div>
+            </div>
+            <div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+                <!-- Connector Line for Desktop -->
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent -z-10">
+                </div>
+                <!-- Step 1 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">search</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 01</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Discover &amp; Analyze</h3>
+                </div>
+                <!-- Step 2 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">account_tree</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 02</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Source &amp; Optimize</h3>
+                </div>
+                <!-- Step 3 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">rocket_launch</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 03</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Execute &amp; Scale</h3>
+                </div>
+                <!-- Step 4 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">monitoring</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 04</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Monitor &amp; Improve</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-only py-24 relative z-10 bg-black border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-6 mb-16">
+                <div class="h-px w-12 bg-primary"></div>
+                <h2 class="text-xs font-bold uppercase tracking-[0.6em] text-primary">Technology Stack</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">dataset</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">ERP / CRM</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">query_stats</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">Data Analytics</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">psychology_alt</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">AI Forecasting</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">shopping_cart</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">E-commerce
+                        Platforms</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">local_shipping</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">Logistics Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Detailed Expertise Section -->
+    <!-- Authority Proof Section -->
+    <section id="trade" class="business-only pb-24 pt-12 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Global Reach & Industries -->
+                <div class="space-y-8">
+                    <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">public</span>
+                            <h3 class="text-2xl font-black tracking-tight uppercase">Global Footprint</h3>
+                        </div>
+                        <p class="text-white/60 text-sm mb-6">Strategically managing cross-border trade operations and
+                            logistics networks across major international hubs.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">India</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">UAE</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">Singapore</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">EU
+                                Markets</span>
+                        </div>
+                        <div class="absolute -right-10 -bottom-10 opacity-10">
+                            <span class="material-symbols-outlined text-[12rem]">travel_explore</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">category</span>
+                            <h3 class="text-2xl font-black tracking-tight uppercase">Industries Served</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">E-Commerce Retail</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">Logistics Tech</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">Supply Chain SaaS</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">Global Trade Ops</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Key Metrics -->
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="p-6 border-l-4 border-primary bg-white/5 hover:bg-white/10 transition-colors">
+                        <div class="text-4xl font-black text-primary mb-1">10+</div>
+                        <div class="text-sm font-bold uppercase tracking-widest text-white mb-2">Supply Partners</div>
+                        <p class="text-xs text-white/40 uppercase tracking-tighter">Cultivating a robust network of
+                            Tier-1 manufacturing and logistics providers.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-primary bg-white/5 hover:bg-white/10 transition-colors">
+                        <div class="text-2xl font-black text-primary mb-1">Multi-Channel</div>
+                        <div class="text-sm font-bold uppercase tracking-widest text-white mb-2">E-commerce Expertise
+                        </div>
+                        <p class="text-xs text-white/40 uppercase tracking-tighter">Optimizing market presence across
+                            global marketplaces and D2C platforms.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-primary bg-white/5 hover:bg-white/10 transition-colors">
+                        <div class="text-2xl font-black text-primary mb-1">End-to-End</div>
+                        <div class="text-sm font-bold uppercase tracking-widest text-white mb-2">Trade Operations</div>
+                        <p class="text-xs text-white/40 uppercase tracking-tighter">Streamlining procurement,
+                            compliance, and last-mile delivery architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-only py-16 bg-black/50 border-y border-white/5 relative z-10 overflow-hidden">
+        <div class="container mx-auto px-6 mb-10">
+            <div class="flex items-center gap-4">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <h3 class="text-xs font-bold uppercase tracking-[0.4em] text-primary/80">E-commerce Partners</h3>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            </div>
+        </div>
+        <div class="marquee-container relative flex overflow-hidden group">
+            <div class="animate-scroll">
+                <div class="flex items-center gap-14 md:gap-20 px-12">
+                    <div class="partner-logo-wrap" title="Amazon">
+                        <img src="assets/ecom/amazon.png" alt="Amazon" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Amazon</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Flipkart">
+                        <img src="assets/ecom/flipkart.png" alt="Flipkart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Flipkart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="JioMart">
+                        <img src="assets/ecom/Jiomart.png" alt="JioMart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>JioMart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Snapdeal">
+                        <img src="assets/ecom/snapdeal.png" alt="Snapdeal" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Snapdeal</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Myntra">
+                        <img src="assets/ecom/myntra.png" alt="Myntra" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Myntra</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Ajio">
+                        <img src="assets/ecom/ajio.png" alt="Ajio" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Ajio</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Nykaa">
+                        <img src="assets/ecom/nykaa.png" alt="Nykaa" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Nykaa</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Tata CLiQ">
+                        <img src="assets/ecom/tata_cliq.png" alt="Tata CLiQ" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Tata CLiQ</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Meesho">
+                        <img src="assets/ecom/meesho.png" alt="Meesho" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Meesho</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Shopsy">
+                        <img src="assets/ecom/shopsy.png" alt="Shopsy" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Shopsy</span></div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-14 md:gap-20 px-12">
+                    <div class="partner-logo-wrap" title="Amazon">
+                        <img src="assets/ecom/amazon.png" alt="Amazon" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Amazon</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Flipkart">
+                        <img src="assets/ecom/flipkart.png" alt="Flipkart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Flipkart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="JioMart">
+                        <img src="assets/ecom/Jiomart.png" alt="JioMart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>JioMart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Snapdeal">
+                        <img src="assets/ecom/snapdeal.png" alt="Snapdeal" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Snapdeal</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Myntra">
+                        <img src="assets/ecom/myntra.png" alt="Myntra" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Myntra</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Ajio">
+                        <img src="assets/ecom/ajio.png" alt="Ajio" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Ajio</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Nykaa">
+                        <img src="assets/ecom/nykaa.png" alt="Nykaa" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Nykaa</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Tata CLiQ">
+                        <img src="assets/ecom/tata_cliq.png" alt="Tata CLiQ" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Tata CLiQ</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Meesho">
+                        <img src="assets/ecom/meesho.png" alt="Meesho" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Meesho</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Shopsy">
+                        <img src="assets/ecom/shopsy.png" alt="Shopsy" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Shopsy</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+        </div>
+    </section>
+    <section class="business-only py-24 bg-black relative z-10 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Expertise Item 1 -->
+                <div
+                    class="p-8 border border-white/5 bg-white/5 rounded-2xl hover:border-primary/50 transition-all duration-500 group">
+                    <div
+                        class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl">hub</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Visionary Leadership</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Directing high-stakes operations across global
+                        markets with a focus on long-term scalability and market dominance.</p>
+                </div>
+                <!-- Expertise Item 2 -->
+                <div
+                    class="p-8 border border-white/5 bg-white/5 rounded-2xl hover:border-primary/50 transition-all duration-500 group">
+                    <div
+                        class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Strategic Synergy</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Crafting ecosystems where technology meets
+                        traditional supply chain to create unprecedented efficiency.</p>
+                </div>
+                <!-- Expertise Item 3 -->
+                <div
+                    class="p-8 border border-white/5 bg-white/5 rounded-2xl hover:border-primary/50 transition-all duration-500 group">
+                    <div
+                        class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl">diversity_3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Stakeholder Growth</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Unifying investors and partners under a shared
+                        vision of global trade excellence and sustainable e-commerce.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Background element -->
+        <div class="absolute bottom-0 right-0 w-1/2 h-full bg-primary/5 blur-[150px] pointer-events-none -z-10"></div>
+    </section>
+    <!-- Global Connection Footer -->
+    <section id="contact" class="py-24 relative z-10 bg-black/40 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Heading -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">
+                    Ready to <span class="text-primary glow-text">Scale?</span>
+                </h2>
+                <p class="text-white/60 text-xs md:text-sm uppercase tracking-[0.4em] font-medium">
+                    Let's Build the Future of Trade Together
+                </p>
+            </div>
+            <!-- CTA Buttons -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">forum</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Start a Trade
+                        Discussion</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">precision_manufacturing</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Build My Supply Chain</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">trending_up</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Scale My E-Commerce</span>
+                </button>
+            </div>
+            <!-- Contact Info -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 max-w-6xl mx-auto">
+                <!-- Quick Inquiry Form -->
+                <div class="glass-card p-8 rounded-3xl text-left border border-primary/20">
+                    <h3 class="text-xl font-black uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+                        <span class="material-symbols-outlined">send</span> Quick Inquiry
+                    </h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Full
+                                Name</label>
+                            <input
+                                class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                placeholder="John Doe" type="text" />
+                        </div>
+                        <div>
+                            <label
+                                class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Business
+                                / Company</label>
+                            <input
+                                class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                placeholder="Enter your company name" type="text" />
+                        </div>
+                        <div>
+                            <label
+                                class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Requirement</label>
+                            <textarea
+                                class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all resize-none"
+                                placeholder="Briefly describe your needs..." rows="3"></textarea>
+                        </div>
+                        <button
+                            class="w-full py-4 bg-primary text-black font-black uppercase tracking-[0.2em] rounded-xl hover:glow-cyan transition-all duration-300"
+                            type="button">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+                <!-- Book a Call & Direct Contact -->
+                <!-- Direct Connect Info -->
+                <div class="glass-card p-8 rounded-3xl text-left border border-primary/20 flex flex-col gap-6">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Direct Contact</p>
+                        <h4 class="text-xl font-black uppercase text-white">NILAVANAN S A</h4>
+                        <p class="text-xs text-white/60 uppercase tracking-widest leading-relaxed">Director &
+                            Shareholder<br>Teleportz | nfashz</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <a href="tel:+918903645897"
+                            class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                            <span class="material-symbols-outlined text-primary text-xl">call</span>
+                            <span class="text-sm font-medium tracking-wide">+91 8903645897</span>
+                        </a>
+                        <div class="space-y-2">
+                            <a href="mailto:nilavanan@teleportz.com"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                                <span class="text-sm font-medium tracking-wide">nilavanan@teleportz.com</span>
+                            </a>
+                            <a href="mailto:nilavanan.sa@zohomail.in"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl opacity-0">mail</span>
+                                <span class="text-sm font-medium tracking-wide">nilavanan.sa@zohomail.in</span>
+                            </a>
+                        </div>
+                        <a href="https://www.teleportz.com" target="_blank"
+                            class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                            <span class="material-symbols-outlined text-primary text-xl">language</span>
+                            <span class="text-sm font-medium tracking-wide">www.teleportz.com</span>
+                        </a>
+                        <div class="flex items-start gap-3 text-white/80">
+                            <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                            <span class="text-sm font-medium tracking-wide leading-relaxed">Bangalore, Karnataka,
+                                India</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                            href="https://wa.me/918903645897">
+                            <span class="material-symbols-outlined text-[#25D366] text-xl">chat</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest">WhatsApp</span>
+                        </a>
+                        <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                            href="tel:+918903645897">
+                            <span class="material-symbols-outlined text-primary text-xl">call</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest">Call Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background Glow -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 blur-[120px] pointer-events-none -z-10">
+        </div>
+    </section>
+    <footer class="py-16 border-t border-white/5 bg-black z-10 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div class="md:col-span-2">
+                    <p class="text-white font-black text-2xl tracking-tighter uppercase mb-4">NILAVANAN S A</p>
+                    <p class="text-white/40 text-xs uppercase tracking-widest leading-relaxed max-w-sm">
+                        Director & Shareholder at Teleportz | nfashz.
+                        <br>
+                        <!-- Pioneering the future of global logistics and
+                        digital trade integration. -->
+                    </p>
+                    <div class="flex gap-4 mt-8">
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <p class="text-xs font-black uppercase tracking-widest text-white mb-6">Contact Informations</p>
+                    <div class="flex items-center gap-3 text-white/60 text-xs">
+                        <span class="material-symbols-outlined text-primary text-lg">call</span>
+                        +91 8903645897
+                    </div>
+                    <div class="flex items-center gap-3 text-white/60 text-xs">
+                        <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                        nilavanan@teleportz.com
+                    </div>
+                    <div class="flex items-center gap-3 text-white/60 text-xs">
+                        <span class="material-symbols-outlined text-primary text-lg opacity-0">mail</span>
+                        nilavanan.sa@zohomail.in
+                    </div>
+                    <div class="flex items-center gap-3 text-white/60 text-xs">
+                        <span class="material-symbols-outlined text-primary text-lg">language</span>
+                        www.teleportz.com
+                    </div>
+                    <div class="flex items-start gap-3 text-white/60 text-xs">
+                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                        Banglore, Karnataka, India
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="flex flex-col items-center md:items-end justify-between">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/20">
+                        <span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-primary">Global Ops
+                            Active</span>
+                    </div>
+                    <p class="text-white/20 text-[10px] uppercase tracking-widest mt-8 md:mt-0">
+                        © 2024 Nilavanan Portfolio.<br>All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+        <button id="image-lightbox-close" class="image-lightbox-close" aria-label="Close image preview">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <img id="image-lightbox-content" class="image-lightbox-content" alt="Expanded profile image" src="" />
+    </div>
+
+    <!-- Sector Toggle Script -->
+    <script>
+        function switchToggle(sector) {
+            const glider = document.getElementById('toggle-glider');
+            const btnBusiness = document.getElementById('btn-business');
+            const btnEducation = document.getElementById('btn-education');
+            const businessContent = document.getElementById('business-content');
+            const educationContent = document.getElementById('education-content');
+            const businessSections = document.querySelectorAll('.business-only');
+            const profileImage = document.getElementById('profile-image');
+            const businessCards = document.getElementById('business-cards');
+            const educationCards = document.getElementById('education-cards');
+            const activeClasses = 'relative z-10 w-[132px] sm:w-[140px] md:w-[160px] py-3 flex items-center justify-center gap-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-black transition-colors duration-500';
+            const inactiveClasses = 'relative z-10 w-[132px] sm:w-[140px] md:w-[160px] py-3 flex items-center justify-center gap-2 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors duration-500';
+
+            if (sector === 'business') {
+                glider.style.transform = 'translateX(0)';
+                btnBusiness.className = activeClasses;
+                btnEducation.className = inactiveClasses;
+                businessContent.classList.remove('hidden');
+                educationContent.classList.add('hidden');
+                businessSections.forEach((section) => section.classList.remove('hidden'));
+                if (profileImage) profileImage.src = 'business.png';
+                if (businessCards) businessCards.classList.remove('hidden');
+                if (educationCards) educationCards.classList.add('hidden');
+            } else {
+                glider.style.transform = 'translateX(100%)';
+                btnBusiness.className = inactiveClasses;
+                btnEducation.className = activeClasses;
+                businessContent.classList.add('hidden');
+                educationContent.classList.remove('hidden');
+                businessSections.forEach((section) => section.classList.add('hidden'));
+                if (profileImage) profileImage.src = 'education.png';
+                if (businessCards) businessCards.classList.add('hidden');
+                if (educationCards) educationCards.classList.remove('hidden');
+            }
+        }
+
+        const profileImage = document.getElementById('profile-image');
+        const imageLightbox = document.getElementById('image-lightbox');
+        const imageLightboxContent = document.getElementById('image-lightbox-content');
+        const imageLightboxClose = document.getElementById('image-lightbox-close');
+
+        function openImageLightbox() {
+            if (!profileImage || !imageLightbox || !imageLightboxContent) return;
+            imageLightboxContent.src = profileImage.src;
+            imageLightbox.classList.add('open');
+            imageLightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageLightbox() {
+            if (!imageLightbox) return;
+            imageLightbox.classList.remove('open');
+            imageLightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        if (profileImage) {
+            profileImage.addEventListener('click', openImageLightbox);
+        }
+
+        if (imageLightboxClose) {
+            imageLightboxClose.addEventListener('click', closeImageLightbox);
+        }
+
+        if (imageLightbox) {
+            imageLightbox.addEventListener('click', (event) => {
+                if (event.target === imageLightbox) {
+                    closeImageLightbox();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeImageLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>

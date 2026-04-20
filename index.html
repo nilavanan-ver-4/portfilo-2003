@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" data-theme="education">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NILAVANAN S A | Director &amp; Shareholder</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "rgb(var(--primary-rgb) / <alpha-value>)",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#000000", // Pure black for cinematic effect
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        :root,
+        html[data-theme='business'] {
+            --primary-rgb: 56 189 248;
+        }
+
+        html[data-theme='tech'] {
+            --primary-rgb: 239 68 68;
+        }
+
+        html[data-theme='education'] {
+            --primary-rgb: 34 197 94;
+        }
+
+        .glass-card {
+            background: rgba(var(--primary-rgb), 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(var(--primary-rgb), 0.15);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+        }
+
+        .rim-light {
+            box-shadow: inset 0 0 50px rgba(var(--primary-rgb), 0.1), 0 0 30px rgba(var(--primary-rgb), 0.05);
+        }
+
+        .gradient-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+
+        .marquee-container:hover .animate-scroll {
+            animation-play-state: paused;
+        }
+
+ .partner-logo-wrap {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 184px;
+            height: 96px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02) 65%);
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            cursor: default;
+        }
+
+        .partner-logo-wrap:hover {
+            transform: translateY(-4px);
+            border-color: rgba(var(--primary-rgb), 0.5);
+            box-shadow: 0 0 18px rgba(var(--primary-rgb), 0.25);
+        }
+
+        .partner-logo-image {
+            width: calc(100% - 1.4rem);
+            height: calc(100% - 1.4rem);
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            background: #fff;
+            padding: 0.35rem;
+            filter: grayscale(6%) brightness(0.98);
+            transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .partner-logo-wrap:hover .partner-logo-image {
+            transform: scale(1.06);
+            filter: grayscale(0%) brightness(1.03);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+        }
+
+        .partner-logo-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0.6rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .partner-logo-wrap:hover .partner-logo-overlay {
+            opacity: 1;
+        }
+
+        .partner-logo-overlay span {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .partner-logo-wrap {
+                width: 152px;
+                height: 84px;
+            }
+        }
+        .skills-card {
+            position: relative;
+            background: linear-gradient(170deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            overflow: hidden;
+            transition: transform 350ms ease, border-color 350ms ease, box-shadow 350ms ease;
+        }
+
+        .skills-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, transparent 25%, rgba(var(--primary-rgb), 0.18) 50%, transparent 75%);
+            transform: translateX(-120%);
+            transition: transform 650ms ease;
+            pointer-events: none;
+        }
+
+        .skills-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(var(--primary-rgb), 0.5);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 0 0 24px rgba(var(--primary-rgb), 0.2);
+        }
+
+        .skills-card:hover::before {
+            transform: translateX(120%);
+        }
+
+        .skills-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            border-radius: 0.75rem;
+            padding: 0.45rem 0.5rem;
+            transition: background-color 250ms ease, transform 250ms ease;
+        }
+
+        .skills-list-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(5px);
+        }
+
+        .skill-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            flex-shrink: 0;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(var(--primary-rgb));
+            background: rgba(var(--primary-rgb), 0.12);
+            border: 1px solid rgba(var(--primary-rgb), 0.25);
+            box-shadow: 0 0 0 rgba(var(--primary-rgb), 0);
+            transition: transform 250ms ease, box-shadow 300ms ease, background-color 300ms ease;
+        }
+
+        .skills-list-item:hover .skill-icon {
+            transform: scale(1.08);
+            background: rgba(var(--primary-rgb), 0.2);
+            box-shadow: 0 0 16px rgba(var(--primary-rgb), 0.35);
+        }
+
+        .skills-list-item .material-symbols-outlined {
+            font-size: 1rem;
+        }
+
+        .skills-wall {
+            background:
+                radial-gradient(circle at top, rgba(var(--primary-rgb), 0.08), transparent 28%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.5rem;
+            padding: 1.5rem 1.25rem;
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.04),
+                0 20px 40px rgba(0, 0, 0, 0.24);
+        }
+
+        .skills-pair-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .skills-group-card {
+            padding: 1rem;
+            border-radius: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+        }
+
+        .section-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(var(--primary-rgb));
+            background:
+                radial-gradient(circle at top left, rgba(var(--primary-rgb), 0.28), transparent 60%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            border: 1px solid rgba(var(--primary-rgb), 0.28);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 10px 28px rgba(0, 0, 0, 0.28);
+            flex-shrink: 0;
+        }
+
+        .section-title-icon .material-symbols-outlined {
+            font-size: 1.35rem;
+        }
+
+        .section-title-copy {
+            min-width: 0;
+        }
+
+        .section-title-kicker {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(var(--primary-rgb), 0.85);
+            margin-bottom: 0.2rem;
+        }
+
+        .immersed-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.95rem;
+        }
+
+        .immersed-card {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.95rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease, background 260ms ease;
+        }
+
+        .immersed-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, transparent, rgba(var(--primary-rgb), 0.08), transparent 70%);
+            opacity: 0;
+            transition: opacity 260ms ease;
+            pointer-events: none;
+        }
+
+        .immersed-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(var(--primary-rgb), 0.35);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.26), 0 0 18px rgba(var(--primary-rgb), 0.12);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        }
+
+        .immersed-card:hover::before {
+            opacity: 1;
+        }
+
+        .immersed-icon {
+            width: 2.85rem;
+            height: 2.85rem;
+            border-radius: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(var(--primary-rgb));
+            background: rgba(var(--primary-rgb), 0.1);
+            border: 1px solid rgba(var(--primary-rgb), 0.2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            flex-shrink: 0;
+        }
+
+        .immersed-icon .material-symbols-outlined {
+            font-size: 1.35rem;
+        }
+
+        .immersed-card h4 {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .immersed-card p {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .skills-group-title {
+            color: #facc15;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.55rem;
+            line-height: 1;
+            margin: 0.35rem 0 1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-bottom: 1.45rem;
+        }
+
+        .skills-grid:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 0.55rem;
+            color: #ffffff;
+            transition: transform 260ms ease, filter 260ms ease, border-color 260ms ease, box-shadow 260ms ease, background 260ms ease;
+            position: relative;
+            min-height: 7.5rem;
+            padding: 1rem 0.65rem 0.9rem;
+            border-radius: 1.15rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+            overflow: hidden;
+        }
+
+        .skill-node::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), transparent 45%);
+            opacity: 0.65;
+            pointer-events: none;
+        }
+
+        .skill-node::after {
+            content: "";
+            position: absolute;
+            top: 0.75rem;
+            left: 50%;
+            width: 2rem;
+            height: 1px;
+            transform: translateX(-50%);
+            background: rgba(var(--primary-rgb), 0.4);
+            pointer-events: none;
+        }
+
+        .skill-node i {
+            font-size: 2.15rem;
+            color: rgba(255, 255, 255, 0.92);
+            transition: color 260ms ease, text-shadow 260ms ease, transform 260ms ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-node span {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.01em;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-node:hover {
+            transform: translateY(-6px);
+            filter: brightness(1.05);
+            border-color: rgba(var(--primary-rgb), 0.28);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28), 0 0 18px rgba(var(--primary-rgb), 0.1);
+        }
+
+        .skill-node:hover i {
+            color: rgb(var(--primary-rgb));
+            text-shadow: 0 0 16px rgba(var(--primary-rgb), 0.5);
+            transform: scale(1.08) translateY(-1px);
+        }
+
+        .skill-node[data-tip]::after {
+            content: attr(data-tip);
+            position: absolute;
+            top: -1.35rem;
+            left: 50%;
+            transform: translate(-50%, -4px);
+            background: #000000;
+            color: #ffffff;
+            font-size: 0.72rem;
+            padding: 0.32rem 0.55rem;
+            border-radius: 0.45rem;
+            opacity: 0;
+            pointer-events: none;
+            white-space: nowrap;
+            transition: opacity 180ms ease, transform 180ms ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .skill-node[data-tip]:hover::after {
+            opacity: 1;
+            transform: translate(-50%, -12px);
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 220ms ease;
+            padding: 1rem;
+        }
+
+        .image-lightbox.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .image-lightbox-content {
+            max-width: min(88vw, 760px);
+            max-height: 88vh;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 1rem;
+            border: 1px solid rgba(var(--primary-rgb), 0.35);
+            box-shadow: 0 0 45px rgba(var(--primary-rgb), 0.18);
+            background: #000;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .resume-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-bg-icon {
+            position: absolute;
+            right: -0.35rem;
+            bottom: -0.45rem;
+            font-size: 4.7rem;
+            color: rgba(var(--primary-rgb), 0.12);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .certificate-card {
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04);
+            transition: border-color 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(var(--primary-rgb), 0.4);
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+        }
+
+        .certificate-media {
+            height: 14rem;
+            padding: 0.75rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 244, 244, 0.92));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .certificate-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 500ms ease;
+        }
+
+        .certificate-card:hover .certificate-media img {
+            transform: scale(1.03);
+        }
+
+        .certificate-card.portrait-certificate .certificate-media {
+            height: 20rem;
+        }
+
+        #toggle-glider {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .toggle-shell {
+            box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.1);
+        }
+
+        .toggle-btn {
+            color: #fff;
+            border-radius: 9999px;
+            transition: color 220ms ease, transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+        }
+
+        .toggle-btn:hover {
+            transform: translateY(-1px);
+            color: #fff;
+        }
+
+        .toggle-inactive {
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.95);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+            opacity: 1;
+        }
+
+        .toggle-active {
+            color: #000;
+            opacity: 1;
+            box-shadow: none;
+        }
+
+        .toggle-btn.toggle-active[data-sector='business'] {
+            background: linear-gradient(90deg, rgb(56 189 248), rgb(14 165 233));
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
+        }
+
+        .toggle-btn.toggle-active[data-sector='tech'] {
+            background: linear-gradient(90deg, rgb(248 113 113), rgb(220 38 38));
+            box-shadow: 0 0 16px rgba(239, 68, 68, 0.45);
+        }
+
+        .toggle-btn.toggle-active[data-sector='education'] {
+            background: linear-gradient(90deg, rgb(74 222 128), rgb(22 163 74));
+            box-shadow: 0 0 16px rgba(34, 197, 94, 0.45);
+        }
+
+        .resume-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .immersed-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .skills-wall {
+                padding: 1.7rem;
+            }
+
+            .skills-pair-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .skills-grid.tools-grid,
+            .skills-grid.prog-grid,
+            .skills-grid.framework-grid,
+            .skills-grid.db-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 767px) {
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            body {
+                background:
+                    radial-gradient(circle at top, rgba(var(--primary-rgb), 0.14), transparent 24%),
+                    linear-gradient(180deg, #060606 0%, #000000 28%, #020202 100%);
+            }
+
+            #profile {
+                min-height: auto;
+                padding-top: 1.25rem;
+                padding-bottom: 2.75rem;
+                overflow-x: clip;
+            }
+
+            .hero-shell {
+                width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                gap: 1.15rem;
+            }
+
+            .hero-toggle-wrap {
+                width: 100%;
+                margin-bottom: 1.1rem;
+            }
+
+            .toggle-shell {
+                width: 100%;
+                padding: 0.38rem;
+                border-radius: 1.35rem;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 0.4rem;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(10, 10, 10, 0.92));
+                box-shadow: 0 18px 38px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            }
+
+            .toggle-btn,
+            .toggle-btn.toggle-active,
+            .toggle-btn.toggle-inactive {
+                width: 100% !important;
+                min-width: 0;
+                padding: 0.85rem 0.25rem;
+                border-radius: 1rem;
+                gap: 0.35rem;
+                flex-direction: row;
+                font-size: 0.62rem;
+                letter-spacing: 0.14em;
+                line-height: 1;
+                justify-content: center;
+            }
+
+            .toggle-btn .material-symbols-outlined {
+                font-size: 0.9rem !important;
+            }
+
+            .hero-portrait-stage {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-portrait-stage > div:first-child {
+                width: min(78vw, 310px);
+                height: min(78vw, 310px);
+                padding: 0.55rem;
+                border-width: 1px;
+                box-shadow:
+                    0 0 0 1px rgba(var(--primary-rgb), 0.12),
+                    0 0 0 18px rgba(var(--primary-rgb), 0.03),
+                    0 22px 44px rgba(0, 0, 0, 0.38);
+            }
+
+            .hero-portrait-stage > div:first-child::after {
+                content: "";
+                position: absolute;
+                inset: -0.65rem;
+                border-radius: 999px;
+                border: 1px solid rgba(var(--primary-rgb), 0.2);
+                pointer-events: none;
+            }
+
+            .section-title-row {
+                gap: 0.75rem;
+                align-items: flex-start;
+            }
+
+            .section-title-icon {
+                width: 2.7rem;
+                height: 2.7rem;
+            }
+
+            .immersed-card {
+                padding: 0.9rem;
+            }
+
+            .hero-copy-shell {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            #business-content,
+            #tech-content,
+            #education-content {
+                width: 100%;
+            }
+
+            #business-content h1,
+            #tech-content h1,
+            #education-content h1 {
+                font-size: clamp(2.55rem, 13vw, 4.3rem);
+                line-height: 0.92;
+                letter-spacing: -0.05em;
+                margin-bottom: 0.9rem;
+                text-wrap: balance;
+            }
+
+            #business-content > p,
+            #tech-content > p,
+            #education-content > div:first-child > p {
+                font-size: 0.86rem;
+                line-height: 1.45;
+                letter-spacing: 0.28em;
+                margin-bottom: 1rem;
+            }
+
+            #tech-focus,
+            #business-content > div:nth-of-type(1),
+            #education-content > div:first-child > div {
+                gap: 0.85rem 0.5rem;
+                padding: 1rem 0.15rem;
+                margin-bottom: 1.4rem;
+            }
+
+            #tech-focus .hidden.md\:block,
+            #business-content > div:nth-of-type(1) .hidden.md\:block,
+            #education-content > div:first-child > div .hidden.md\:block {
+                display: none;
+            }
+
+            #tech-focus > div,
+            #business-content > div:nth-of-type(1) > div,
+            #education-content > div:first-child > div > div {
+                width: calc(50% - 0.3rem);
+                justify-content: flex-start;
+                gap: 0.45rem;
+            }
+
+            #tech-focus span:last-child,
+            #business-content > div:nth-of-type(1) span:last-child,
+            #education-content > div:first-child > div span:last-child {
+                font-size: 0.63rem;
+                letter-spacing: 0.16em;
+                line-height: 1.45;
+            }
+
+            .mobile-floating-cards {
+                position: relative;
+                inset: auto;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.7rem;
+                pointer-events: auto;
+            }
+
+            .mobile-floating-cards.hidden {
+                display: none !important;
+            }
+
+            .mobile-floating-cards > div {
+                position: relative !important;
+                inset: auto !important;
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+                bottom: auto !important;
+                max-width: none;
+                min-height: 4.75rem;
+                padding: 0.8rem 0.8rem;
+                gap: 0.55rem;
+                border-radius: 1rem;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+                border: 1px solid rgba(var(--primary-rgb), 0.14);
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+            }
+
+            .mobile-floating-cards > div p:first-child {
+                font-size: 0.56rem;
+                letter-spacing: 0.16em;
+            }
+
+            .mobile-floating-cards > div p:last-child {
+                font-size: 0.86rem;
+                line-height: 1.2;
+            }
+
+            .mobile-floating-cards .material-symbols-outlined {
+                font-size: 1rem;
+            }
+
+            #tech-architecture {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            #tech-architecture > div {
+                padding: 1rem;
+                border-radius: 1.15rem;
+            }
+
+            #tech-skills,
+            #tech-resumes,
+            #tech-experience,
+            #education-content > div:last-child {
+                margin-top: 1.6rem;
+            }
+
+            .glass-card,
+            .skills-wall,
+            .resume-card,
+            .certificate-card,
+            #tech-experience > div > div,
+            #education-content .bg-primary\/10 {
+                border-radius: 1.2rem;
+            }
+
+            .skills-wall {
+                padding: 1rem 0.75rem;
+            }
+
+            .skills-group-card {
+                padding: 0.8rem;
+            }
+
+            .skills-group-title {
+                font-size: 1.28rem;
+                margin: 0.25rem 0 0.85rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.75rem;
+            }
+
+            .skill-node i {
+                font-size: 1.8rem;
+            }
+
+            .skill-node span {
+                font-size: 0.82rem;
+            }
+
+            .skill-node {
+                min-height: 6.6rem;
+                padding: 0.85rem 0.45rem 0.8rem;
+            }
+
+            #contact .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            #contact .grid.grid-cols-1.lg\:grid-cols-2 {
+                gap: 1rem;
+            }
+
+            #contact .glass-card {
+                padding: 1.1rem;
+                border-radius: 1.3rem;
+            }
+
+            footer .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .certificate-media {
+                height: 12.5rem;
+                padding: 0.6rem;
+            }
+
+            .certificate-card.portrait-certificate .certificate-media {
+                height: 18rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark text-white font-display overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header
+        class="hidden md:flex fixed top-0 left-0 w-full z-50 px-6 py-4 items-center justify-between border-b border-white/5 bg-black/40 backdrop-blur-md">
+        <div class="flex items-center gap-3">
+            <div class="size-8 bg-primary/20 rounded-full flex items-center justify-center border border-primary/40">
+                <span class="material-symbols-outlined text-primary text-xl">insights</span>
+            </div>
+            <span class="text-white text-lg font-black tracking-tighter uppercase">NILAVANAN S A</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+            <a id="nav-link-1" class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#profile">Profile</a>
+            <a id="nav-link-2" class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#ecosystem">Ecosystem</a>
+            <a id="nav-link-3" class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#trade">Global Trade</a>
+            <a id="nav-link-4" class="text-xs uppercase tracking-[0.2em] font-medium text-white/60 hover:text-primary transition-colors"
+                href="#contact">Contact</a>
+        </nav>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+            class="hidden md:block px-5 py-2 bg-primary/10 border border-primary text-primary text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary hover:text-black transition-all duration-300">
+            Connect
+        </button>
+    </header>
+    <main id="profile" class="relative min-h-screen flex flex-col items-center justify-center pt-20">
+        <!-- Connectivity Arcs (Decorative Background) -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            <svg class="absolute top-1/4 left-1/4 w-[800px] h-[400px]" viewbox="0 0 800 400">
+                <path class="text-primary" d="M0,200 Q400,0 800,200" fill="none" stroke="currentColor"
+                    stroke-dasharray="5 5" stroke-width="0.5"></path>
+            </svg>
+            <svg class="absolute bottom-1/4 right-1/4 w-[600px] h-[300px]" viewbox="0 0 600 300">
+                <path class="text-primary" d="M0,150 Q300,300 600,150" fill="none" stroke="currentColor"
+                    stroke-dasharray="10 5" stroke-width="0.5"></path>
+            </svg>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full bg-primary/5 blur-[120px]">
+            </div>
+        </div>
+        <!-- Hero Section -->
+        <div class="hero-shell relative z-10 container mx-auto px-4 flex flex-col items-center">
+            <!-- High-End Sector Toggle -->
+            <div class="hero-toggle-wrap mb-12 md:mb-16 relative group z-50">
+                <div
+                    class="relative toggle-shell glass-card p-1.5 rounded-full flex bg-gradient-to-b from-white/10 to-black/80 border border-white/10 backdrop-blur-xl overflow-hidden">
+                    <div id="toggle-glider"
+                        class="absolute top-1.5 left-1.5 bottom-1.5 w-[96px] sm:w-[110px] md:w-[128px] rounded-full transition-transform duration-500 ease-in-out z-0">
+                    </div>
+                    <button id="btn-business" onclick="switchToggle('business')"
+                        data-sector="business"
+                        class="toggle-btn relative z-10 w-[96px] sm:w-[110px] md:w-[128px] py-3 flex items-center justify-center gap-1.5 text-[10px] md:text-xs font-black uppercase tracking-[0.16em] transition-all duration-500">
+                        <span class="material-symbols-outlined text-sm md:text-base drop-shadow-md">domain</span>
+                        Business
+                    </button>
+                    
+                    <button id="btn-education" onclick="switchToggle('education')"
+                        data-sector="education"
+                        class="toggle-btn relative z-10 w-[96px] sm:w-[110px] md:w-[128px] py-3 flex items-center justify-center gap-1.5 text-[10px] md:text-xs font-black uppercase tracking-[0.16em] transition-all duration-500">
+                        <span class="material-symbols-outlined text-sm md:text-base">school</span>
+                        Education
+                    </button>
+                    <button id="btn-tech" onclick="switchToggle('tech')"
+                        data-sector="tech"
+                        class="toggle-btn relative z-10 w-[96px] sm:w-[110px] md:w-[128px] py-3 flex items-center justify-center gap-1.5 text-[10px] md:text-xs font-black uppercase tracking-[0.16em] transition-all duration-500">
+                        <span class="material-symbols-outlined text-sm md:text-base">memory</span>
+                        Tech
+                    </button>
+                </div>
+            </div>
+
+            <!-- Portrait Container -->
+            <div class="hero-portrait-stage relative mb-12 group">
+                <!-- Portrait Image -->
+                <div
+                    class="relative size-64 md:size-80 lg:size-[450px] rounded-full overflow-hidden rim-light border-2 border-primary/20 p-2">
+                    <img id="profile-image" alt="Portrait of Nilavanan S A"
+                        class="w-full h-full object-cover rounded-full gradient-mask grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 cursor-zoom-in"
+                        src="passport.jpg" />
+                </div>
+                <!-- Floating Glassmorphism Cards -->
+                <div id="business-cards" class="hidden mobile-floating-cards">
+                    <!-- Card 1: Top Left -->
+                    <div
+                        class="absolute -top-4 -left-12 lg:-left-24 glass-card px-4 py-3 rounded-xl flex items-center gap-3 glow-cyan animate-pulse">
+                        <span class="material-symbols-outlined text-primary">public</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Operation</p>
+                            <p class="text-xs font-medium text-white">Global Trade Operations</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Mid Right -->
+                    <div
+                        class="absolute top-1/4 -right-16 lg:-right-32 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">inventory_2</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Network</p>
+                            <p class="text-xs font-medium text-white">Product Sourcing</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Bottom Left -->
+                    <div
+                        class="absolute bottom-10 -left-16 lg:-left-40 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">analytics</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Intelligence</p>
+                            <p class="text-xs font-medium text-white">Supply Chain Intelligence</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Bottom Right -->
+                    <div
+                        class="absolute -bottom-6 -right-12 lg:-right-20 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">monitoring</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Analytics</p>
+                            <p class="text-xs font-medium text-white">E-Commerce Strategy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tech-cards" class="hidden mobile-floating-cards">
+                    <div
+                        class="absolute -top-4 -left-12 lg:-left-24 glass-card px-4 py-3 rounded-xl flex items-center gap-3 glow-cyan animate-pulse">
+                        <span class="material-symbols-outlined text-primary">code</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Engineering</p>
+                            <p class="text-xs font-medium text-white">Full-Stack Systems</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-1/4 -right-16 lg:-right-32 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">deployed_code</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Delivery</p>
+                            <p class="text-xs font-medium text-white">CI/CD Pipelines</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-10 -left-16 lg:-left-40 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">neurology</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">AI Stack</p>
+                            <p class="text-xs font-medium text-white">GenAI Integrations</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -right-12 lg:-right-20 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">dns</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Backend</p>
+                            <p class="text-xs font-medium text-white">Cloud APIs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="education-cards" class="mobile-floating-cards">
+                    <!-- Card 1: Top Left -->
+                    <div
+                        class="absolute -top-4 -left-12 lg:-left-24 glass-card px-4 py-3 rounded-xl flex items-center gap-3 glow-cyan animate-pulse">
+                        <span class="material-symbols-outlined text-primary">school</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Academics</p>
+                            <p class="text-xs font-medium text-white">MBA Curriculum</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Mid Right -->
+                    <div
+                        class="absolute top-1/4 -right-16 lg:-right-32 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">smart_toy</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Robotics</p>
+                            <p class="text-xs font-medium text-white">Automation</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Bottom Left -->
+                    <div
+                        class="absolute bottom-10 -left-16 lg:-left-40 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">cloud</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Cloud</p>
+                            <p class="text-xs font-medium text-white">CI/CD &amp; DevOps</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Bottom Right -->
+                    <div
+                        class="absolute -bottom-6 -right-12 lg:-right-20 glass-card px-4 py-3 rounded-xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary">psychology</span>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold">Gen AI</p>
+                            <p class="text-xs font-medium text-white">Prompt Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Text Content -->
+            <div class="hero-copy-shell w-full max-w-6xl px-4">
+                <div id="business-content" class="hidden text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white">
+                        NILAVANAN S A
+                    </h1>
+                    <p class="text-primary text-sm md:text-lg font-bold tracking-[0.3em] uppercase mb-6 glow-text">
+                        Director &amp; Shareholder at Teleportz | nfashz
+                    </p>
+                    <!-- Expertise Bar -->
+                    <div
+                        class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 border-y border-white/10 py-4 px-6">
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Global
+                                Trade</span>
+                        </div>
+                        <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Supply
+                                Chain</span>
+                        </div>
+                        <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span
+                                class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">E-Commerce
+                                Strategy</span>
+                        </div>
+                    </div>
+                    <!-- Primary CTA -->
+                    <div class="flex flex-col items-center gap-6">
+                        <button
+                            class="group relative px-10 py-4 bg-primary text-black font-black uppercase tracking-[0.2em] rounded-lg transition-all duration-300 hover:scale-105 glow-cyan">
+                            <span class="relative z-10">Explore Our Ecosystem</span>
+                            <div
+                                class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+                            </div>
+                        </button>
+                        <p class="text-white/40 text-[10px] uppercase tracking-widest max-w-md">
+                            Pioneering the future of global logistics and digital trade integration through strategic
+                            excellence.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="tech-content" class="hidden text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white">
+                        NILAVANAN S A
+                    </h1>
+                    <p class="text-primary text-sm md:text-lg font-bold tracking-[0.3em] uppercase mb-6 glow-text">
+                        Full-Stack Developer | Cloud &amp; AI Systems
+                    </p>
+                    <div id="tech-focus"
+                        class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 border-y border-white/10 py-4 px-6">
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Web
+                                Platforms</span>
+                        </div>
+                        <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Cloud
+                                Automation</span>
+                        </div>
+                        <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                            <span class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">AI
+                                Applications</span>
+                        </div>
+                    </div>
+                    <div id="tech-architecture" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+                        <div class="glass-card p-5 rounded-2xl border border-primary/20">
+                            <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-2">Frontend</p>
+                            <p class="text-sm text-white/80">React, Tailwind, responsive UI systems and high-fidelity interactions.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl border border-primary/20">
+                            <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-2">Backend</p>
+                            <p class="text-sm text-white/80">Node.js APIs, Python services, auth, databases, and observability.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl border border-primary/20">
+                            <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-2">Delivery</p>
+                            <p class="text-sm text-white/80">Containerized deployments, CI/CD pipelines, and cloud-first architecture.</p>
+                        </div>
+                    </div>
+
+                    <div id="tech-skills" class="mt-10 text-left">
+                        <div class="glass-card p-6 rounded-2xl border border-primary/20 mb-8">
+                            <div class="section-title-row">
+                                <span class="section-title-icon">
+                                    <span class="material-symbols-outlined">neurology</span>
+                                </span>
+                                <div class="section-title-copy">
+                                    <p class="section-title-kicker">AI Trajectory</p>
+                                    <h3 class="text-xl md:text-2xl font-black text-white">Currently immersed in...</h3>
+                                </div>
+                            </div>
+                            <div class="immersed-grid">
+                                <article class="immersed-card">
+                                    <span class="immersed-icon"><span class="material-symbols-outlined">tune</span></span>
+                                    <div>
+                                        <h4>AI Prompt Engineer / Prompt Engineering Specialist</h4>
+                                        <p>Designs, tests, and refines prompts for Large Language Models (LLMs) to produce high-quality, consistent outputs.</p>
+                                    </div>
+                                </article>
+                                <article class="immersed-card">
+                                    <span class="immersed-icon"><span class="material-symbols-outlined">hub</span></span>
+                                    <div>
+                                        <h4>AI Agent Engineer</h4>
+                                        <p>Builds, maintains, and optimizes autonomous AI agents and workflow systems, including stacks such as n8n and LangChain.</p>
+                                    </div>
+                                </article>
+                                <article class="immersed-card">
+                                    <span class="immersed-icon"><span class="material-symbols-outlined">dataset_linked</span></span>
+                                    <div>
+                                        <h4>Generative AI / LLM Engineer</h4>
+                                        <p>Develops and deploys LLM applications in production with a strong focus on RAG patterns and prompt optimization.</p>
+                                    </div>
+                                </article>
+                                <article class="immersed-card">
+                                    <span class="immersed-icon"><span class="material-symbols-outlined">imagesmode</span></span>
+                                    <div>
+                                        <h4>AI Image &amp; Video Creator / Prompt Engineer</h4>
+                                        <p>Creates, refines, and automates visual content workflows using generative AI image and video models.</p>
+                                    </div>
+                                </article>
+                                <article class="immersed-card">
+                                    <span class="immersed-icon"><span class="material-symbols-outlined">inventory_2</span></span>
+                                    <div>
+                                        <h4>AI Product Manager</h4>
+                                        <p>Shapes AI initiatives from concept to launch while aligning technical delivery with user needs and business goals.</p>
+                                    </div>
+                                </article>
+                                <article class="immersed-card">
+                                    <span class="immersed-icon"><span class="material-symbols-outlined">psychology_alt</span></span>
+                                    <div>
+                                        <h4>AI Trainer / RLHF Specialist</h4>
+                                        <p>Evaluates and improves model behavior through Reinforcement Learning from Human Feedback (RLHF) and structured quality tuning.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="section-title-row">
+                            <span class="section-title-icon">
+                                <span class="material-symbols-outlined">deployed_code</span>
+                            </span>
+                            <div class="section-title-copy">
+                                <p class="section-title-kicker">Foundation Stack</p>
+                                <h3 class="text-xl md:text-2xl font-black text-white">Hands-on with these tools before 2026</h3>
+                            </div>
+                        </div>
+                        <div class="skills-wall">
+                            <div class="skills-pair-grid">
+                                <div class="skills-group-card">
+                                    <p class="skills-group-title">Tools</p>
+                                    <div class="skills-grid tools-grid">
+                                        <div class="skill-node"><i class="devicon-git-plain"></i><span>Git</span></div>
+                                        <div class="skill-node"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                                        <div class="skill-node"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                                        <div class="skill-node"><i class="devicon-grafana-plain"></i><span>Grafana</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-group-card">
+                                    <p class="skills-group-title">Programming</p>
+                                    <div class="skills-grid prog-grid">
+                                        <div class="skill-node"><i class="devicon-python-plain"></i><span>Python</span></div>
+                                        <div class="skill-node"><i class="devicon-java-plain"></i><span>Java</span></div>
+                                        <div class="skill-node" data-tip="Powers dynamic web applications"><i
+                                                class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                                        <div class="skill-node"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-group-card">
+                                    <p class="skills-group-title">Frameworks</p>
+                                    <div class="skills-grid framework-grid">
+                                        <div class="skill-node"><i class="devicon-react-original"></i><span>React.js</span></div>
+                                        <div class="skill-node"><i class="devicon-vitejs-plain"></i><span>Vite.js</span></div>
+                                        <div class="skill-node"><i class="devicon-express-original"></i><span>Express</span></div>
+                                        <div class="skill-node"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-group-card">
+                                    <p class="skills-group-title">Databases</p>
+                                    <div class="skills-grid db-grid">
+                                        <div class="skill-node"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+                                        <div class="skill-node"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span>
+                                        </div>
+                                        <div class="skill-node"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+                                        <div class="skill-node"><i class="devicon-apachespark-original"></i><span>Apache
+                                                Spark</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tech-resumes" class="mt-10 text-left">
+                        <h3 class="text-xl md:text-2xl font-black text-white mb-2">Resumes</h3>
+                        <p class="text-white/60 text-sm mb-6">Download or view the resume that fits your needs.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">precision_manufacturing</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">Robotics and Cloud Engineer</p>
+                                    <p class="text-white/60 text-sm mb-4">Resume focused on robotics, cloud projects,
+                                        automation systems, and applied engineering work.</p>
+                                    <div class="flex gap-3">
+                                        <a href="Resumes/Nilavanan_Robotics_Cloud_Resume.pdf" target="_blank"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="Resumes/Nilavanan_Robotics_Cloud_Resume.pdf" download
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">cloud_sync</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">Cloud and DevOps Engineer</p>
+                                    <p class="text-white/60 text-sm mb-4">Resume highlighting cloud infrastructure and Devops,
+                                        DevOps practices, CI/CD pipelines, and deployment automation.</p>
+                                    <div class="flex gap-3">
+                                        <a href="Resumes/Nilavanan_Cloud_Devops_Resume.pdf" target="_blank"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="Resumes/Nilavanan_Cloud_Devops_Resume.pdf" download
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 resume-card">
+                                <span class="material-symbols-outlined resume-bg-icon">dns</span>
+                                <div class="resume-card-content">
+                                    <p class="text-white font-bold mb-1">Backend Developer</p>
+                                    <p class="text-white/60 text-sm mb-4">Resume centered on backend development,
+                                        APIs, databases, and software delivery experience.</p>
+                                    <div class="flex gap-3">
+                                        <a href="Resumes/Nilavanan_Backend.pdf" target="_blank"
+                                            class="px-4 py-2 rounded-lg bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30">View</a>
+                                        <a href="Resumes/Nilavanan_Backend.pdf" download
+                                            class="px-4 py-2 rounded-lg bg-primary text-black text-xs font-bold uppercase tracking-widest">Download</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tech-experience" class="mt-10 text-left">
+                        <h3 class="text-xl md:text-2xl font-black text-white mb-4">Experience</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white/5 border border-primary/20 rounded-2xl p-5">
+                                <p class="text-white text-base md:text-lg font-bold leading-snug">Backend Developer &amp;
+                                    Business Analyst (Contract)</p>
+                                <p class="text-primary text-sm font-semibold mt-1">Tunelink Networks AI, Bengaluru</p>
+                                <p class="text-white/60 text-xs mt-1 tracking-wide">Aug 2025 - ApR 2025 | Hybrid</p>
+                                <p class="text-sm mt-3"><span class="text-primary font-semibold">Tools:</span> <span
+                                        class="text-white/80">Python, Flask, Django, PostgreSQL, Grafana, Twilio</span>
+                                </p>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Built
+                                            backend systems using Python and Node.js, and set up real-time monitoring
+                                            with Grafana.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Deployed
+                                            an AI-powered voice interaction system with Twilio for live call
+                                            automation.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Enhanced
+                                            responsive web applications using Flask and Django.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Managed
+                                            MySQL and PostgreSQL databases with focus on performance optimization.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/5 border border-primary/20 rounded-2xl p-5">
+    <p class="text-white text-base md:text-lg font-bold leading-snug">Backend Developer (Intern)</p>
+    <p class="text-primary text-sm font-semibold mt-1">Mittai Healthcare Pvt Ltd</p>
+    <p class="text-white/60 text-xs mt-1 tracking-wide">Jan 2025 - Jul 2025 | Onsite</p>
+    <p class="text-sm mt-3">
+        <span class="text-primary font-semibold">Tools:</span>
+        <span class="text-white/80">Node.js, Grafana, Twilio, FastAPI</span>
+    </p>
+    <ul class="mt-4 space-y-2">
+        <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed">
+            <span class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span>
+            <span>Developed AI-powered voice automation systems to streamline business communications.</span>
+        </li>
+        <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed">
+            <span class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span>
+            <span>Built real-time performance dashboards using Grafana to support management decision-making.</span>
+        </li>
+    </ul>
+</div>
+                            <div class="bg-white/5 border border-primary/20 rounded-2xl p-5">
+                                <p class="text-white text-base md:text-lg font-bold leading-snug">IoT and Robotics
+                                    (Intern)</p>
+                                <p class="text-primary text-sm font-semibold mt-1">Nissi Engineering Solutions, Chennai
+                                </p>
+                                <p class="text-white/60 text-xs mt-1 tracking-wide">Jun 2024 - Jul 2024 | On-site</p>
+                                <p class="text-sm mt-3"><span class="text-primary font-semibold">Tools:</span> <span
+                                        class="text-white/80">Arduino, C++, Sensors, Embedded Systems</span></p>
+                                <ul class="mt-4 space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Implemented
+                                            basic robotic systems using Arduino microcontrollers.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Gained
+                                            hands-on experience with various sensor interfacing techniques.</span></li>
+                                    <li class="flex items-start gap-2 text-sm text-white/80 leading-relaxed"><span
+                                            class="mt-1.5 size-1.5 rounded-full bg-primary/90 flex-shrink-0"></span><span>Learned
+                                            fundamentals of embedded programming and hardware integration.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="education-content" class="mt-8 w-full space-y-10">
+                    <div class="text-center max-w-4xl mx-auto mb-10">
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 text-white">
+                            NILAVANAN S A
+                        </h1>
+                        <p class="text-primary text-sm md:text-lg font-bold tracking-[0.3em] uppercase mb-6 glow-text">
+                            MBA student at Annamalai University
+                        </p>
+                        <!-- Expertise Bar -->
+                        <div
+                            class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 border-y border-white/10 py-4 px-6">
+                            <div class="flex items-center gap-2">
+                                <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                                <span
+                                    class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">Robotics
+                                    &amp; Cloud</span>
+                            </div>
+                            <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                                <span
+                                    class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">DevOps
+                                    &amp; CI/CD</span>
+                            </div>
+                            <div class="hidden md:block w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="size-1.5 rounded-full bg-primary animate-ping"></div>
+                                <span
+                                    class="text-xs md:text-sm tracking-widest uppercase font-medium text-white/80">GenAI
+                                    &amp; VibeCoding</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="education-academics" class="space-y-4">
+                        <div class="section-title-row">
+                            <span class="section-title-icon">
+                                <span class="material-symbols-outlined">school</span>
+                            </span>
+                            <div class="section-title-copy">
+                                <p class="section-title-kicker">Academic Journey</p>
+                                <h3 class="text-xl md:text-2xl font-black text-white">Academics</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="glass-card p-6 rounded-2xl border border-primary/20">
+                                <p class="text-white text-lg font-black leading-snug">MBA (Financial Management) [DDE]</p>
+                                <p class="text-primary text-sm font-semibold mt-2">Annamalai University</p>
+                                <p class="text-white/60 text-xs mt-2 tracking-wide">Aug 2025 - May 2027 | In Progress</p>
+                                <p class="text-white/70 text-sm mt-4 leading-relaxed">Focused on financial management,
+                                    business decision-making, and distance education-based professional growth.</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-2xl border border-primary/20">
+                                <p class="text-white text-lg font-black leading-snug">B.E Computer Science (Data Science)</p>
+                                <p class="text-primary text-sm font-semibold mt-2">Annamalai University</p>
+                                <p class="text-white/60 text-xs mt-2 tracking-wide">Nov 2021 - May 2025 | OGPA: 8.05</p>
+                                <p class="text-white/70 text-sm mt-4 leading-relaxed">Built a foundation in computer
+                                    science, data science, analytics, software engineering, and applied problem-solving.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="education-certifications" class="space-y-4">
+                        <div class="section-title-row">
+                            <span class="section-title-icon">
+                                <span class="material-symbols-outlined">workspace_premium</span>
+                            </span>
+                            <div class="section-title-copy">
+                                <p class="section-title-kicker">Proof Of Learning</p>
+                                <h3 class="text-xl md:text-2xl font-black text-white">Certifications</h3>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <a href="assets/Certificates/1486326_Data_Science_with_R_programming_2939128_page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/1486326_Data_Science_with_R_programming_2939128_page-0001.jpg"
+                                        alt="Data Science with R Programming certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">Data Science with R Programming</p>
+                                </div>
+                            </a>
+                            <a href="assets/Certificates/Advanced Distributed Systems_page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/Advanced Distributed Systems_page-0001.jpg"
+                                        alt="Advanced Distributed Systems certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">Advanced Distributed Systems</p>
+                                </div>
+                            </a>
+                            <a href="assets/Certificates/Deep Learning - IIT Ropar_page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/Deep Learning - IIT Ropar_page-0001.jpg"
+                                        alt="Deep Learning IIT Ropar certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">Deep Learning - IIT Ropar</p>
+                                </div>
+                            </a>
+                            <a href="assets/Certificates/Introduction to Generative AI Studio_page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/Introduction to Generative AI Studio_page-0001.jpg"
+                                        alt="Introduction to Generative AI Studio certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">Introduction to Generative AI Studio</p>
+                                </div>
+                            </a>
+                            <a href="assets/Certificates/Learning Business English Nilavanan S.A _page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/Learning Business English Nilavanan S.A _page-0001.jpg"
+                                        alt="Learning Business English certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">Learning Business English</p>
+                                </div>
+                            </a>
+                            <a href="assets/Certificates/sql_advanced certificate_page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/sql_advanced certificate_page-0001.jpg"
+                                        alt="SQL Advanced certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">SQL Advanced</p>
+                                </div>
+                            </a>
+                            <a href="assets/Certificates/Predictive Analysis  Canva_page-0001.jpg"
+                                target="_blank"
+                                class="certificate-card portrait-certificate group block">
+                                <div class="certificate-media">
+                                    <img src="assets/Certificates/Predictive Analysis  Canva_page-0001.jpg"
+                                        alt="Predictive Analysis certificate" />
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-white font-semibold">Predictive Analysis</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-primary/10 border border-primary/25 rounded-2xl p-5">
+                            <p class="text-primary uppercase tracking-widest text-xs font-bold mb-2">Certifications</p>
+                            <p class="text-white/80 text-sm">Cloud, DevOps, AI, and software development certifications.
+                            </p>
+                        </div>
+                        <div class="bg-primary/10 border border-primary/25 rounded-2xl p-5">
+                            <p class="text-primary uppercase tracking-widest text-xs font-bold mb-2">Projects</p>
+                            <p class="text-white/80 text-sm">Robotics, automation, cloud-native, and GenAI project
+                                portfolio.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="ecosystem" class="business-only py-24 relative z-10 overflow-hidden border-t border-white/5">
+        <div class="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-primary/5 blur-[120px] pointer-events-none"></div>
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-6 mb-16">
+                <div class="h-px w-12 bg-primary"></div>
+                <h2 class="text-xs font-bold uppercase tracking-[0.6em] text-primary">Founder's Vision</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Vision Statement -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-2 border-primary/40 flex flex-col justify-between group hover:border-primary transition-all duration-500">
+                    <div class="space-y-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+                        <h3 class="text-xl font-black uppercase tracking-tight">Vision Statement</h3>
+                        <p class="text-lg font-medium text-white leading-tight">Pioneering global trade through
+                            strategic digital ecosystems.</p>
+                    </div>
+                </div>
+                <!-- Story -->
+                <div
+                    class="glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-primary transition-all duration-500">
+                    <div class="space-y-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">history_edu</span>
+                        <h3 class="text-xl font-black uppercase tracking-tight">The Story</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Teleportz and nfashz were born from a mission to bridge the gap between complex global
+                            logistics and seamless digital commerce. We built these platforms to empower brands with
+                            intelligent supply chain infrastructure.
+                        </p>
+                    </div>
+                </div>
+                <!-- Mindset -->
+                <div
+                    class="glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-primary transition-all duration-500">
+                    <div class="space-y-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">psychology</span>
+                        <h3 class="text-xl font-black uppercase tracking-tight">Mindset</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            Strategy is the blueprint, but execution is the heartbeat. My approach combines data-driven
+                            intelligence with relentless operational excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-only py-24 relative z-10 bg-black/30 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-center gap-6 mb-16">
+                <div class="h-px w-12 bg-primary/40"></div>
+                <h2 class="text-xs font-bold uppercase tracking-[0.6em] text-primary">Strategic Workflow</h2>
+                <div class="h-px w-12 bg-primary/40"></div>
+            </div>
+            <div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+                <!-- Connector Line for Desktop -->
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent -z-10">
+                </div>
+                <!-- Step 1 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">search</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 01</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Discover &amp; Analyze</h3>
+                </div>
+                <!-- Step 2 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">account_tree</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 02</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Source &amp; Optimize</h3>
+                </div>
+                <!-- Step 3 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">rocket_launch</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 03</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Execute &amp; Scale</h3>
+                </div>
+                <!-- Step 4 -->
+                <div
+                    class="glass-card p-6 rounded-2xl flex flex-col items-center text-center w-full md:w-64 border-b-2 border-primary/20 group hover:border-primary transition-all duration-300">
+                    <div
+                        class="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary">monitoring</span>
+                    </div>
+                    <p class="text-[10px] text-primary/60 font-bold uppercase tracking-widest mb-1">Step 04</p>
+                    <h3 class="text-sm font-black uppercase tracking-tight">Monitor &amp; Improve</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-only py-24 relative z-10 bg-black border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-6 mb-16">
+                <div class="h-px w-12 bg-primary"></div>
+                <h2 class="text-xs font-bold uppercase tracking-[0.6em] text-primary">Technology Stack</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">dataset</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">ERP / CRM</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">query_stats</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">Data Analytics</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">psychology_alt</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">AI Forecasting</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">shopping_cart</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">E-commerce
+                        Platforms</span>
+                </div>
+                <div
+                    class="glass-card p-6 rounded-xl flex flex-col items-center gap-4 hover:bg-primary/5 transition-colors group border border-white/5">
+                    <span
+                        class="material-symbols-outlined text-primary/60 group-hover:text-primary text-3xl transition-colors">local_shipping</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-center">Logistics Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Detailed Expertise Section -->
+    <!-- Authority Proof Section -->
+    <section id="trade" class="business-only pb-24 pt-12 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Global Reach & Industries -->
+                <div class="space-y-8">
+                    <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">public</span>
+                            <h3 class="text-2xl font-black tracking-tight uppercase">Global Footprint</h3>
+                        </div>
+                        <p class="text-white/60 text-sm mb-6">Strategically managing cross-border trade operations and
+                            logistics networks across major international hubs.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">India</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">UAE</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">Singapore</span>
+                            <span
+                                class="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">EU
+                                Markets</span>
+                        </div>
+                        <div class="absolute -right-10 -bottom-10 opacity-10">
+                            <span class="material-symbols-outlined text-[12rem]">travel_explore</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">category</span>
+                            <h3 class="text-2xl font-black tracking-tight uppercase">Industries Served</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">E-Commerce Retail</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">Logistics Tech</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">Supply Chain SaaS</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary/60 text-sm">check_circle</span>
+                                <span class="text-xs font-medium text-white/80">Global Trade Ops</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Key Metrics -->
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="p-6 border-l-4 border-primary bg-white/5 hover:bg-white/10 transition-colors">
+                        <div class="text-4xl font-black text-primary mb-1">10+</div>
+                        <div class="text-sm font-bold uppercase tracking-widest text-white mb-2">Supply Partners</div>
+                        <p class="text-xs text-white/40 uppercase tracking-tighter">Cultivating a robust network of
+                            Tier-1 manufacturing and logistics providers.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-primary bg-white/5 hover:bg-white/10 transition-colors">
+                        <div class="text-2xl font-black text-primary mb-1">Multi-Channel</div>
+                        <div class="text-sm font-bold uppercase tracking-widest text-white mb-2">E-commerce Expertise
+                        </div>
+                        <p class="text-xs text-white/40 uppercase tracking-tighter">Optimizing market presence across
+                            global marketplaces and D2C platforms.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-primary bg-white/5 hover:bg-white/10 transition-colors">
+                        <div class="text-2xl font-black text-primary mb-1">End-to-End</div>
+                        <div class="text-sm font-bold uppercase tracking-widest text-white mb-2">Trade Operations</div>
+                        <p class="text-xs text-white/40 uppercase tracking-tighter">Streamlining procurement,
+                            compliance, and last-mile delivery architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="business-only py-16 bg-black/50 border-y border-white/5 relative z-10 overflow-hidden">
+        <div class="container mx-auto px-6 mb-10">
+            <div class="flex items-center gap-4">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+                <h3 class="text-xs font-bold uppercase tracking-[0.4em] text-primary/80">E-commerce Partners</h3>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            </div>
+        </div>
+        <div class="marquee-container relative flex overflow-hidden group">
+            <div class="animate-scroll">
+                <div class="flex items-center gap-14 md:gap-20 px-12">
+                    <div class="partner-logo-wrap" title="Amazon">
+                        <img src="assets/ecom/amazon.png" alt="Amazon" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Amazon</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Flipkart">
+                        <img src="assets/ecom/flipkart.png" alt="Flipkart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Flipkart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="JioMart">
+                        <img src="assets/ecom/Jiomart.png" alt="JioMart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>JioMart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Snapdeal">
+                        <img src="assets/ecom/snapdeal.png" alt="Snapdeal" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Snapdeal</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Myntra">
+                        <img src="assets/ecom/myntra.png" alt="Myntra" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Myntra</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Ajio">
+                        <img src="assets/ecom/ajio.png" alt="Ajio" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Ajio</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Nykaa">
+                        <img src="assets/ecom/nykaa.png" alt="Nykaa" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Nykaa</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Tata CLiQ">
+                        <img src="assets/ecom/tata_cliq.png" alt="Tata CLiQ" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Tata CLiQ</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Meesho">
+                        <img src="assets/ecom/meesho.png" alt="Meesho" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Meesho</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Shopsy">
+                        <img src="assets/ecom/shopsy.png" alt="Shopsy" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Shopsy</span></div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-14 md:gap-20 px-12">
+                    <div class="partner-logo-wrap" title="Amazon">
+                        <img src="assets/ecom/amazon.png" alt="Amazon" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Amazon</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Flipkart">
+                        <img src="assets/ecom/flipkart.png" alt="Flipkart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Flipkart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="JioMart">
+                        <img src="assets/ecom/Jiomart.png" alt="JioMart" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>JioMart</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Snapdeal">
+                        <img src="assets/ecom/snapdeal.png" alt="Snapdeal" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Snapdeal</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Myntra">
+                        <img src="assets/ecom/myntra.png" alt="Myntra" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Myntra</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Ajio">
+                        <img src="assets/ecom/ajio.png" alt="Ajio" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Ajio</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Nykaa">
+                        <img src="assets/ecom/nykaa.png" alt="Nykaa" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Nykaa</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Tata CLiQ">
+                        <img src="assets/ecom/tata_cliq.png" alt="Tata CLiQ" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Tata CLiQ</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Meesho">
+                        <img src="assets/ecom/meesho.png" alt="Meesho" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Meesho</span></div>
+                    </div>
+                    <div class="partner-logo-wrap" title="Shopsy">
+                        <img src="assets/ecom/shopsy.png" alt="Shopsy" class="partner-logo-image" loading="lazy">
+                        <div class="partner-logo-overlay"><span>Shopsy</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+        </div>
+    </section>
+    <section class="business-only py-24 bg-black relative z-10 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Expertise Item 1 -->
+                <div
+                    class="p-8 border border-white/5 bg-white/5 rounded-2xl hover:border-primary/50 transition-all duration-500 group">
+                    <div
+                        class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl">hub</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Visionary Leadership</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Directing high-stakes operations across global
+                        markets with a focus on long-term scalability and market dominance.</p>
+                </div>
+                <!-- Expertise Item 2 -->
+                <div
+                    class="p-8 border border-white/5 bg-white/5 rounded-2xl hover:border-primary/50 transition-all duration-500 group">
+                    <div
+                        class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Strategic Synergy</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Crafting ecosystems where technology meets
+                        traditional supply chain to create unprecedented efficiency.</p>
+                </div>
+                <!-- Expertise Item 3 -->
+                <div
+                    class="p-8 border border-white/5 bg-white/5 rounded-2xl hover:border-primary/50 transition-all duration-500 group">
+                    <div
+                        class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl">diversity_3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Stakeholder Growth</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Unifying investors and partners under a shared
+                        vision of global trade excellence and sustainable e-commerce.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Background element -->
+        <div class="absolute bottom-0 right-0 w-1/2 h-full bg-primary/5 blur-[150px] pointer-events-none -z-10"></div>
+    </section>
+    <!-- Global Connection Footer -->
+    <section id="contact" class="py-24 relative z-10 bg-black/40 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Heading -->
+            <div class="mb-16">
+                <div id="contact-heading-business" class="hidden">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">
+                        Ready to <span class="text-primary glow-text">Scale?</span>
+                    </h2>
+                    <p class="text-white/60 text-xs md:text-sm uppercase tracking-[0.4em] font-medium">
+                        Let's Build the Future of Trade Together
+                    </p>
+                </div>
+                <div id="contact-heading-tech" class="hidden">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">
+                        Ready to <span class="text-primary glow-text">Build?</span>
+                    </h2>
+                    <p class="text-white/60 text-xs md:text-sm uppercase tracking-[0.4em] font-medium">
+                        Let's Engineer Modern Cloud And AI Products
+                    </p>
+                </div>
+                <div id="contact-heading-education">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">
+                        Ready to <span class="text-primary glow-text">Connect?</span>
+                    </h2>
+                    <p class="text-white/60 text-xs md:text-sm uppercase tracking-[0.4em] font-medium">
+                        Let's Share Academic Growth And Career Opportunities
+                    </p>
+                </div>
+            </div>
+            <!-- CTA Buttons -->
+            <div id="contact-cta-business" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">forum</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Start a Trade
+                        Discussion</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">precision_manufacturing</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Build My Supply Chain</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">trending_up</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Scale My E-Commerce</span>
+                </button>
+            </div>
+            <div id="contact-cta-tech" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">code_blocks</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Build My Product</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">cloud_sync</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Design Cloud Stack</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">neurology</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Launch AI Workflow</span>
+                </button>
+            </div>
+            <div id="contact-cta-education" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">school</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Discuss Academics</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">workspace_premium</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Review Certificates</span>
+                </button>
+                <button
+                    class="glass-card p-6 rounded-2xl border border-primary/20 hover:border-primary/60 hover:glow-cyan transition-all duration-500 group flex flex-col items-center gap-4">
+                    <span
+                        class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">work</span>
+                    <span class="text-sm font-black uppercase tracking-widest text-white">Explore Opportunities</span>
+                </button>
+            </div>
+            <!-- Contact Info -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 max-w-6xl mx-auto">
+                <!-- Quick Inquiry Form -->
+                <div class="glass-card p-8 rounded-3xl text-left border border-primary/20">
+                    <div id="contact-form-business" class="hidden">
+                        <h3 class="text-xl font-black uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined">send</span> Business Inquiry
+                        </h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Full
+                                    Name</label>
+                                <input
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                    placeholder="John Doe" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Business
+                                    / Company</label>
+                                <input
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                    placeholder="Enter your company name" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Requirement</label>
+                                <textarea
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all resize-none"
+                                    placeholder="Briefly describe your trade, sourcing, or e-commerce needs..." rows="3"></textarea>
+                            </div>
+                            <button
+                                class="w-full py-4 bg-primary text-black font-black uppercase tracking-[0.2em] rounded-xl hover:glow-cyan transition-all duration-300"
+                                type="button">
+                                Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
+                    <div id="contact-form-tech" class="hidden">
+                        <h3 class="text-xl font-black uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined">terminal</span> Project Brief
+                        </h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Name</label>
+                                <input
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                    placeholder="Your name" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Product
+                                    / Project</label>
+                                <input
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                    placeholder="App, platform, API, AI workflow..." type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Technical
+                                    Need</label>
+                                <textarea
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all resize-none"
+                                    placeholder="Tell me what you want to build, improve, or automate..." rows="3"></textarea>
+                            </div>
+                            <button
+                                class="w-full py-4 bg-primary text-black font-black uppercase tracking-[0.2em] rounded-xl hover:glow-cyan transition-all duration-300"
+                                type="button">
+                                Send Brief
+                            </button>
+                        </form>
+                    </div>
+                    <div id="contact-form-education">
+                        <h3 class="text-xl font-black uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined">school</span> Academic Connect
+                        </h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Name</label>
+                                <input
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                    placeholder="Your name" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Institution
+                                    / Context</label>
+                                <input
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all"
+                                    placeholder="College, mentor, recruiter, or collaborator" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold">Message</label>
+                                <textarea
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-primary/60 focus:ring-1 focus:ring-primary/60 outline-none transition-all resize-none"
+                                    placeholder="Share your academic, certification, or opportunity-related message..." rows="3"></textarea>
+                            </div>
+                            <button
+                                class="w-full py-4 bg-primary text-black font-black uppercase tracking-[0.2em] rounded-xl hover:glow-cyan transition-all duration-300"
+                                type="button">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Book a Call & Direct Contact -->
+                <!-- Direct Connect Info -->
+                <div class="glass-card p-8 rounded-3xl text-left border border-primary/20 flex flex-col gap-6">
+                    <div id="contact-business-panel" class="hidden">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Direct Contact</p>
+                            <h4 class="text-xl font-black uppercase text-white">NILAVANAN S A</h4>
+                            <p class="text-xs text-white/60 uppercase tracking-widest leading-relaxed">Director &amp;
+                                Shareholder<br>Teleportz | nfashz</p>
+                        </div>
+                        <div class="space-y-4 mt-6">
+                            <a href="tel:+917090070987"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">call</span>
+                                <span class="text-sm font-medium tracking-wide">+91 7090070987</span>
+                            </a>
+                            <a href="mailto:nilavanan@teleportz.com"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                                <span class="text-sm font-medium tracking-wide">nilavanan@teleportz.com</span>
+                            </a>
+                            <a href="mailto:nilavanan.sa@yahoo.com"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                                <span class="text-sm font-medium tracking-wide">nilavanan.sa@yahoo.com</span>
+                            </a>
+                            <a href="https://www.teleportz.com" target="_blank"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">language</span>
+                                <span class="text-sm font-medium tracking-wide">www.teleportz.com</span>
+                            </a>
+                            <div class="flex items-start gap-3 text-white/80">
+                                <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                                <span class="text-sm font-medium tracking-wide leading-relaxed">Bangalore, Karnataka,
+                                    India</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 pt-6">
+                            <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                                href="https://wa.me/917090070987">
+                                <span class="material-symbols-outlined text-[#25D366] text-xl">chat</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">WhatsApp</span>
+                            </a>
+                            <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                                href="tel:+917090070987">
+                                <span class="material-symbols-outlined text-primary text-xl">call</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">Call Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="contact-tech-panel" class="hidden">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Direct Contact</p>
+                            <h4 class="text-xl font-black uppercase text-white">NILAVANAN S A</h4>
+                            <p class="text-xs text-white/60 uppercase tracking-widest leading-relaxed">Full-Stack
+                                Developer<br>Cloud &amp; AI Systems</p>
+                        </div>
+                        <div class="space-y-4 mt-6">
+                            <a href="tel:+918903645897"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">call</span>
+                                <span class="text-sm font-medium tracking-wide">+91 8903645897</span>
+                            </a>
+                            <a href="mailto:nilavanan.sa@zohomail.in"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                                <span class="text-sm font-medium tracking-wide">nilavanan.sa@zohomail.in</span>
+                            </a>
+                            <div class="flex items-start gap-3 text-white/80">
+                                <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                                <span class="text-sm font-medium tracking-wide leading-relaxed">Bangalore, Karnataka,
+                                    India</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 pt-6">
+                            <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                                href="https://wa.me/918903645897">
+                                <span class="material-symbols-outlined text-[#25D366] text-xl">chat</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">WhatsApp</span>
+                            </a>
+                            <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                                href="tel:+918903645897">
+                                <span class="material-symbols-outlined text-primary text-xl">call</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">Call Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="contact-education-panel">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1">Direct Contact</p>
+                            <h4 class="text-xl font-black uppercase text-white">NILAVANAN S A</h4>
+                            <p class="text-xs text-white/60 uppercase tracking-widest leading-relaxed">MBA
+                                Student<br>Annamalai University</p>
+                        </div>
+                        <div class="space-y-4 mt-6">
+                            <a href="tel:+919688635548"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">call</span>
+                                <span class="text-sm font-medium tracking-wide">+91 9688635548</span>
+                            </a>
+                            <a href="mailto:sanilavanan2003@gmail.com"
+                                class="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                                <span class="text-sm font-medium tracking-wide">sanilavanan2003@gmail.com</span>
+                            </a>
+                            <div class="flex items-start gap-3 text-white/80">
+                                <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                                <span class="text-sm font-medium tracking-wide leading-relaxed">Tamil Nadu, India</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 pt-6">
+                            <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                                href="https://wa.me/919688635548">
+                                <span class="material-symbols-outlined text-[#25D366] text-xl">chat</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">WhatsApp</span>
+                            </a>
+                            <a class="py-3 rounded-xl flex items-center justify-center gap-2 border border-primary/20 bg-primary/5 hover:border-primary/60 transition-all group"
+                                href="tel:+919688635548">
+                                <span class="material-symbols-outlined text-primary text-xl">call</span>
+                                <span class="text-[10px] font-black uppercase tracking-widest">Call Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background Glow -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 blur-[120px] pointer-events-none -z-10">
+        </div>
+    </section>
+    <footer class="py-16 border-t border-white/5 bg-black z-10 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Branding -->
+                <div class="md:col-span-2">
+                    <div id="footer-brand-business" class="hidden">
+                        <p class="text-white font-black text-2xl tracking-tighter uppercase mb-4">NILAVANAN S A</p>
+                        <p class="text-white/40 text-xs uppercase tracking-widest leading-relaxed max-w-sm">
+                            Director &amp; Shareholder at Teleportz | nfashz.
+                        </p>
+                    </div>
+                    <div id="footer-brand-tech" class="hidden">
+                        <p class="text-white font-black text-2xl tracking-tighter uppercase mb-4">NILAVANAN S A</p>
+                        <p class="text-white/40 text-xs uppercase tracking-widest leading-relaxed max-w-sm">
+                            Full-Stack Developer for cloud platforms, AI systems, and product-ready applications.
+                        </p>
+                    </div>
+                    <div id="footer-brand-education">
+                        <p class="text-white font-black text-2xl tracking-tighter uppercase mb-4">NILAVANAN S A</p>
+                        <p class="text-white/40 text-xs uppercase tracking-widest leading-relaxed max-w-sm">
+                            MBA student focused on business fundamentals, emerging technology, and practical learning.
+                        </p>
+                    </div>
+                    <div class="flex gap-4 mt-8">
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <svg class="size-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="text-xs font-black uppercase tracking-widest text-white mb-6">Contact Informations</p>
+                    <div id="footer-contact-business" class="hidden space-y-4">
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            +91 7090070987
+                        </div>
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            nilavanan.sa@yahoo.com
+                        </div>
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">language</span>
+                            www.teleportz.com
+                        </div>
+                        <div class="flex items-start gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            Bangalore, Karnataka, India
+                        </div>
+                    </div>
+                    <div id="footer-contact-tech" class="hidden space-y-4">
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            +91 8903645897
+                        </div>
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            nilavanan.sa@zohomail.in
+                        </div>
+                        <div class="flex items-start gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            Bangalore, Karnataka, India
+                        </div>
+                    </div>
+                    <div id="footer-contact-education" class="space-y-4">
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            +91 9688635548
+                        </div>
+                        <div class="flex items-center gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            sanilavanan2003@gmail.com
+                        </div>
+                        <div class="flex items-start gap-3 text-white/60 text-xs">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            Tamil Nadu, India
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="flex flex-col items-center md:items-end justify-between">
+                    <div id="footer-status-business"
+                        class="hidden flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/20">
+                        <span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-primary">Global Ops Active</span>
+                    </div>
+                    <div id="footer-status-tech"
+                        class="hidden flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/20">
+                        <span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-primary">Tech Systems Active</span>
+                    </div>
+                    <div id="footer-status-education"
+                        class="flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/20">
+                        <span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-primary">Learning Track Active</span>
+                    </div>
+                    <p class="text-white/50 text-[10px] uppercase tracking-widest mt-8 md:mt-0">
+                        © 2024 Nilavanan Portfolio.<br>All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+        <button id="image-lightbox-close" class="image-lightbox-close" aria-label="Close image preview">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <img id="image-lightbox-content" class="image-lightbox-content" alt="Expanded profile image" src="" />
+    </div>
+
+    <!-- Sector Toggle Script -->
+    <script>
+        function updateNavbarForSector(sector) {
+            const nav1 = document.getElementById('nav-link-1');
+            const nav2 = document.getElementById('nav-link-2');
+            const nav3 = document.getElementById('nav-link-3');
+            const nav4 = document.getElementById('nav-link-4');
+
+            if (!nav1 || !nav2 || !nav3 || !nav4) return;
+
+            if (sector === 'business') {
+                nav1.textContent = 'Profile';
+                nav1.setAttribute('href', '#profile');
+                nav2.textContent = 'Ecosystem';
+                nav2.setAttribute('href', '#ecosystem');
+                nav3.textContent = 'Global Trade';
+                nav3.setAttribute('href', '#trade');
+                nav4.textContent = 'Contact';
+                nav4.setAttribute('href', '#contact');
+                return;
+            }
+
+            if (sector === 'tech') {
+                nav1.textContent = 'Profile';
+                nav1.setAttribute('href', '#profile');
+                nav2.textContent = 'Resumes';
+                nav2.setAttribute('href', '#tech-resumes');
+                nav3.textContent = 'Experience';
+                nav3.setAttribute('href', '#tech-experience');
+                nav4.textContent = 'Contact';
+                nav4.setAttribute('href', '#contact');
+                return;
+            }
+
+            nav1.textContent = 'Profile';
+            nav1.setAttribute('href', '#profile');
+            nav2.textContent = 'Academics';
+            nav2.setAttribute('href', '#education-academics');
+            nav3.textContent = 'Highlights';
+            nav3.setAttribute('href', '#education-certifications');
+            nav4.textContent = 'Contact';
+            nav4.setAttribute('href', '#contact');
+        }
+
+        function switchToggle(sector) {
+            const glider = document.getElementById('toggle-glider');
+            const btnBusiness = document.getElementById('btn-business');
+            const btnTech = document.getElementById('btn-tech');
+            const btnEducation = document.getElementById('btn-education');
+            const businessContent = document.getElementById('business-content');
+            const techContent = document.getElementById('tech-content');
+            const educationContent = document.getElementById('education-content');
+            const businessSections = document.querySelectorAll('.business-only');
+            const profileImage = document.getElementById('profile-image');
+            const businessCards = document.getElementById('business-cards');
+            const techCards = document.getElementById('tech-cards');
+            const educationCards = document.getElementById('education-cards');
+            const contactBusinessPanel = document.getElementById('contact-business-panel');
+            const contactTechPanel = document.getElementById('contact-tech-panel');
+            const contactEducationPanel = document.getElementById('contact-education-panel');
+            const contactHeadingBusiness = document.getElementById('contact-heading-business');
+            const contactHeadingTech = document.getElementById('contact-heading-tech');
+            const contactHeadingEducation = document.getElementById('contact-heading-education');
+            const contactCtaBusiness = document.getElementById('contact-cta-business');
+            const contactCtaTech = document.getElementById('contact-cta-tech');
+            const contactCtaEducation = document.getElementById('contact-cta-education');
+            const contactFormBusiness = document.getElementById('contact-form-business');
+            const contactFormTech = document.getElementById('contact-form-tech');
+            const contactFormEducation = document.getElementById('contact-form-education');
+            const footerBrandBusiness = document.getElementById('footer-brand-business');
+            const footerBrandTech = document.getElementById('footer-brand-tech');
+            const footerBrandEducation = document.getElementById('footer-brand-education');
+            const footerContactBusiness = document.getElementById('footer-contact-business');
+            const footerContactTech = document.getElementById('footer-contact-tech');
+            const footerContactEducation = document.getElementById('footer-contact-education');
+            const footerStatusBusiness = document.getElementById('footer-status-business');
+            const footerStatusTech = document.getElementById('footer-status-tech');
+            const footerStatusEducation = document.getElementById('footer-status-education');
+            const activeClasses = 'toggle-btn toggle-active relative z-10 w-[96px] sm:w-[110px] md:w-[128px] py-3 flex items-center justify-center gap-1.5 text-[10px] md:text-xs font-black uppercase tracking-[0.16em] transition-all duration-500';
+            const inactiveClasses = 'toggle-btn toggle-inactive relative z-10 w-[96px] sm:w-[110px] md:w-[128px] py-3 flex items-center justify-center gap-1.5 text-[10px] md:text-xs font-black uppercase tracking-[0.16em] transition-all duration-500';
+
+            if (!glider || !btnBusiness || !btnTech || !btnEducation) return;
+
+            btnBusiness.className = inactiveClasses;
+            btnTech.className = inactiveClasses;
+            btnEducation.className = inactiveClasses;
+            if (businessContent) businessContent.classList.add('hidden');
+            if (techContent) techContent.classList.add('hidden');
+            if (educationContent) educationContent.classList.add('hidden');
+            if (businessCards) businessCards.classList.add('hidden');
+            if (techCards) techCards.classList.add('hidden');
+            if (educationCards) educationCards.classList.add('hidden');
+            if (contactBusinessPanel) contactBusinessPanel.classList.add('hidden');
+            if (contactTechPanel) contactTechPanel.classList.add('hidden');
+            if (contactEducationPanel) contactEducationPanel.classList.add('hidden');
+            if (contactHeadingBusiness) contactHeadingBusiness.classList.add('hidden');
+            if (contactHeadingTech) contactHeadingTech.classList.add('hidden');
+            if (contactHeadingEducation) contactHeadingEducation.classList.add('hidden');
+            if (contactCtaBusiness) contactCtaBusiness.classList.add('hidden');
+            if (contactCtaTech) contactCtaTech.classList.add('hidden');
+            if (contactCtaEducation) contactCtaEducation.classList.add('hidden');
+            if (contactFormBusiness) contactFormBusiness.classList.add('hidden');
+            if (contactFormTech) contactFormTech.classList.add('hidden');
+            if (contactFormEducation) contactFormEducation.classList.add('hidden');
+            if (footerBrandBusiness) footerBrandBusiness.classList.add('hidden');
+            if (footerBrandTech) footerBrandTech.classList.add('hidden');
+            if (footerBrandEducation) footerBrandEducation.classList.add('hidden');
+            if (footerContactBusiness) footerContactBusiness.classList.add('hidden');
+            if (footerContactTech) footerContactTech.classList.add('hidden');
+            if (footerContactEducation) footerContactEducation.classList.add('hidden');
+            if (footerStatusBusiness) footerStatusBusiness.classList.add('hidden');
+            if (footerStatusTech) footerStatusTech.classList.add('hidden');
+            if (footerStatusEducation) footerStatusEducation.classList.add('hidden');
+
+            if (sector === 'business') {
+                document.documentElement.setAttribute('data-theme', 'business');
+                updateNavbarForSector('business');
+                glider.style.transform = 'translateX(0)';
+                btnBusiness.className = activeClasses;
+                if (businessContent) businessContent.classList.remove('hidden');
+                businessSections.forEach((section) => section.classList.remove('hidden'));
+                if (profileImage) profileImage.src = 'business - Copy.png';
+                if (businessCards) businessCards.classList.remove('hidden');
+                if (contactBusinessPanel) contactBusinessPanel.classList.remove('hidden');
+                if (contactHeadingBusiness) contactHeadingBusiness.classList.remove('hidden');
+                if (contactCtaBusiness) contactCtaBusiness.classList.remove('hidden');
+                if (contactFormBusiness) contactFormBusiness.classList.remove('hidden');
+                if (footerBrandBusiness) footerBrandBusiness.classList.remove('hidden');
+                if (footerContactBusiness) footerContactBusiness.classList.remove('hidden');
+                if (footerStatusBusiness) footerStatusBusiness.classList.remove('hidden');
+                return;
+            }
+
+            if (sector === 'tech') {
+                document.documentElement.setAttribute('data-theme', 'tech');
+                updateNavbarForSector('tech');
+                glider.style.transform = 'translateX(100%)';
+                btnTech.className = activeClasses;
+                if (techContent) techContent.classList.remove('hidden');
+                businessSections.forEach((section) => section.classList.add('hidden'));
+                if (profileImage) profileImage.src = 'tech.png';
+                if (techCards) techCards.classList.remove('hidden');
+                if (contactTechPanel) contactTechPanel.classList.remove('hidden');
+                if (contactHeadingTech) contactHeadingTech.classList.remove('hidden');
+                if (contactCtaTech) contactCtaTech.classList.remove('hidden');
+                if (contactFormTech) contactFormTech.classList.remove('hidden');
+                if (footerBrandTech) footerBrandTech.classList.remove('hidden');
+                if (footerContactTech) footerContactTech.classList.remove('hidden');
+                if (footerStatusTech) footerStatusTech.classList.remove('hidden');
+                return;
+            }
+
+            document.documentElement.setAttribute('data-theme', 'education');
+            updateNavbarForSector('education');
+            glider.style.transform = 'translateX(200%)';
+            btnEducation.className = activeClasses;
+            if (educationContent) educationContent.classList.remove('hidden');
+            businessSections.forEach((section) => section.classList.add('hidden'));
+            if (profileImage) profileImage.src = 'education.jpg';
+            if (educationCards) educationCards.classList.remove('hidden');
+            if (contactEducationPanel) contactEducationPanel.classList.remove('hidden');
+            if (contactHeadingEducation) contactHeadingEducation.classList.remove('hidden');
+            if (contactCtaEducation) contactCtaEducation.classList.remove('hidden');
+            if (contactFormEducation) contactFormEducation.classList.remove('hidden');
+            if (footerBrandEducation) footerBrandEducation.classList.remove('hidden');
+            if (footerContactEducation) footerContactEducation.classList.remove('hidden');
+            if (footerStatusEducation) footerStatusEducation.classList.remove('hidden');
+        }
+
+        const profileImage = document.getElementById('profile-image');
+        const imageLightbox = document.getElementById('image-lightbox');
+        const imageLightboxContent = document.getElementById('image-lightbox-content');
+        const imageLightboxClose = document.getElementById('image-lightbox-close');
+
+        function openImageLightbox() {
+            if (!profileImage || !imageLightbox || !imageLightboxContent) return;
+            imageLightboxContent.src = profileImage.src;
+            imageLightbox.classList.add('open');
+            imageLightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageLightbox() {
+            if (!imageLightbox) return;
+            imageLightbox.classList.remove('open');
+            imageLightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        if (profileImage) {
+            profileImage.addEventListener('click', openImageLightbox);
+        }
+
+        if (imageLightboxClose) {
+            imageLightboxClose.addEventListener('click', closeImageLightbox);
+        }
+
+        if (imageLightbox) {
+            imageLightbox.addEventListener('click', (event) => {
+                if (event.target === imageLightbox) {
+                    closeImageLightbox();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeImageLightbox();
+            }
+        });
+
+        switchToggle('education');
+    </script>
+</body>
+
+</html>
